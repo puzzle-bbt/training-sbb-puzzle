@@ -1,0 +1,32 @@
+{
+  "name": "training-sbb-puzzle-hugo",
+  "version": "1.0.0",
+  "description": "Ausbildung SBB / Puzzle",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puzzle-bbt/training-sbb-puzzle.git"
+  },
+  "author": "Puzzle ITC",
+  "dependencies": {
+    "autoprefixer": "^10.0.0",
+    "husky": "^5.0.0",
+    "postcss-cli": "^8.0.0"
+  },
+  "scripts": {
+    "mdlint": "markdownlint --config .markdownlint.json content *.md",
+    "prepare": "husky install"
+  },
+  "bugs": {
+    "url": "https://github.com/puzzle-bbt/training-sbb-puzzle/issues"
+  },
+  "homepage": "https://github.com/puzzle-bbt/training-sbb-puzzle#readme",
+  "devDependencies": {
+    "markdownlint-cli": "0.27.1"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  }
+}

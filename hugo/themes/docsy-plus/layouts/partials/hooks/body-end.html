@@ -1,0 +1,15 @@
+{{ $jsSite := "" }}
+{{ $jsCodeCopy := resources.Get "js/code-copy.js" }}
+{{ if .Site.Params.ReplaceLabContent }}
+{{ $jsReplaceContent := resources.Get "js/replace-content.js" }}
+{{ $jsReplaceContent = $jsReplaceContent | resources.ExecuteAsTemplate "replace-content.js" . }}
+{{ $jsSite = (slice $jsCodeCopy $jsReplaceContent) | resources.Concat "js/site.js" }}
+{{ else }}
+{{ $jsSite = $jsCodeCopy | js.Build "js/site.js" }}
+{{ end }}
+{{ if .Site.IsServer }}
+<script src="{{ $jsSite.RelPermalink }}"></script>
+{{ else }}
+{{ $jsSite := $jsSite | minify | fingerprint }}
+<script src="{{ $jsSite.RelPermalink }}" integrity="{{ $jsSite.Data.Integrity }}" crossorigin="anonymous"></script>
+{{ end }}
