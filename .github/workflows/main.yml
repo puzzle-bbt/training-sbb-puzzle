@@ -1,23 +1,42 @@
-name: hugo-latest-cd
+name: github pages
 
 on:
   push:
     branches:
-      - master
-
-env:
-  TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  HUGO_ARGS: '--minify --theme docsy'
+      - master  # Set a branch to deploy
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - name: 🛎 Check out master
-        uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
-          fetch-depth: 1
-      - name: 🚀 Build and deploy
-        uses: victoriadrake/hugo-latest-cd@master
+          submodules: recursive  # Fetch the Docsy theme
+          fetch-depth: 0         # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.81.0'
+          extended: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12.x'
+
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
