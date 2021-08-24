@@ -1,9 +1,9 @@
 ---
-title: "2. Git"
-weight: 1
+title: "Git"
+weight: 3
 sectionnumber: 1
-description: >
-  Das mit diesem Git
+date: 2021-08-24
+description: Das mit diesem Git
 ---
 
 Ziel dieses Labs:

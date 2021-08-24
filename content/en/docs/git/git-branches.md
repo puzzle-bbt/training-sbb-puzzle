@@ -1,10 +1,8 @@
 ---
-title: "2.3 Git Branches"
-linkTitle: "2.3 Git Branches"
-weight: 110
-sectionnumber: 2.3
+title: "Git Branches"
+linkTitle: "Git Branches"
+weight: 3
 ---
-
 
 ## Inhalt
 

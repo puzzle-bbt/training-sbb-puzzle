@@ -1,8 +1,7 @@
 ---
-title: "2.1 Was ist Git"
-linkTitle: "2.1 Was ist Git"
-weight: 110
-sectionnumber: 2.1
+title: "Was ist Git"
+linkTitle: "Was ist Git"
+weight: 1
 ---
 
 > Git [ɡɪt] ist eine freie Software zur verteilten Versionsverwaltung von Dateien, die durch Linus Torvalds initiiert wurde.

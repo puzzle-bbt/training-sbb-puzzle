@@ -1,8 +1,7 @@
 ---
-title: "2.2 Git Basics"
-linkTitle: "2.2 Git Basics"
-weight: 110
-sectionnumber: 2.2
+title: "Git Basics"
+linkTitle: "Git Basics"
+weight: 2
 ---
 
 Git kann auf unterschiedliche Arten eingesetzt werden, es gibt graphische Oberflächen und die meisten Git-Server Software bieten Weboberflächen, welche das interagieren mit Git Repositories kinderleicht gestalten. Da diese Oberflächen meist sehr Produktspezifisch sind und oft auch nicht alle Funktionen beinhaltet werden hier nur die Kommandozeilen Befehle angeschaut.
