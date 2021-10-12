@@ -1351,7 +1351,503 @@ i++;
 } while (condition);
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: Maven und Continuous Integration</title><link>/training-sbb-puzzle/docs/java/maven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/maven/</guid><description>
+&lt;/div></description></item><item><title>Docs: Was ist Git</title><link>/training-sbb-puzzle/docs/git/was-ist-git/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/was-ist-git/</guid><description>
+&lt;blockquote>
+&lt;p>Git [ɡɪt] ist eine freie Software zur verteilten Versionsverwaltung von Dateien, die durch Linus Torvalds initiiert wurde.&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="inhalt">Inhalt&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="#was-ist-versionsverwaltung">Was ist Versionsverwaltung&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#geschichte">Geschichte&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#name">Name&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#wie-funktioniert-git">Wie funktioniert Git&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="was-ist-versionsverwaltung">Was ist Versionsverwaltung&lt;/h2>
+&lt;p>Eine Versionsverwaltung ist ein System, welches Änderungen an einer oder mehreren Dateien über die Zeit protokolliert, um die Entwicklung nachvollziehbar zu machen und womit man jederzeit auf bestimmte vorherige Versionen zugreifen kann.&lt;/p>
+&lt;h3 id="lokale-versionsverwaltung">Lokale Versionsverwaltung&lt;/h3>
+&lt;p>Eine lokale Versionsverwaltung hat wohl fast jeder schon mal bei sich eingesetzt. Die einfachste Version davon ist, wenn man zum Beispiel eine Datei kopiert und an der Kopie weiter arbeitet:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>user@computer ~/gymi/arbeit/&lt;span style="color:#f92672">]&lt;/span>$ ls
+matura_arbeit.docx matura_arbeit_fastfertig.docx matura_arbeit_wirklichfertig.docx matura_arbeit_wirklichfertig_formatiert.docx matura_final.docx
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Dies ist jedoch sehr Fehleranfällig, da man schnell die falsche Datei erwischt. Aus diesem Grund, haben Programmierer bereits vor langer Zeit, lokale Versionsverwaltungssysteme entwickelt, die alle Änderungen an allen relevanten Dateien in einer Datenbank verwalten. Ein Beispiel dafür ist &lt;a href="https://www.gnu.org/software/rcs/">RCS&lt;/a>&lt;/p>
+&lt;h3 id="zentrale-versionsverwaltung">Zentrale Versionsverwaltung&lt;/h3>
+&lt;p>Um die Zusammenarbeit von mehreren Personen zu vereinfachen wurden zentrale Versionsverwaltungssysteme entwickelt. Diese Systeme basieren auf einem zentralen Server der alle Dateien verwaltet. User holen eine Datei ab (Auschecken oder engl. to check out) editieren sie und nur berechtigte User dürfen die Datei anschliessend wieder auf den Server stellen. Ein Beispiel dafür ist &lt;a href="https://subversion.apache.org/">SVN&lt;/a>&lt;/p>
+&lt;h3 id="verteilte-versionsverwaltung">Verteilte Versionsverwaltung&lt;/h3>
+&lt;p>Im Gegensatz zu zentralen Systeme wo der Benutzer nur den letzten Stand zur Verfügung hat, kopiert er bei verteilten Versionsverwaltungen eine vollständiger Klon des Repositories auf sein System und hat somit auch die komplette Geschichte lokal. Dies vereinfacht dem Entwickler das lokale arbeiten und erhöht die Ausfallsicherheit. Zusätzlich können solche System gut mit verschiedenen externen Repositories (Remotes) umgehen was die Zusammenarbeit weiter vereinfacht. Ein Beispiel dafür ist &lt;a href="https://git-scm.com">GIT&lt;/a>&lt;/p>
+&lt;h2 id="geschichte">Geschichte&lt;/h2>
+&lt;p>Git entstand aufgrund einer Lizenzänderung von &lt;code>BitKeeper&lt;/code>, der Versionsverwaltung welche vom Linux Kernel bis 2005 verwendet wurde. Da die Kernel Entwickler die Software nicht mehr kostenlos nutzen konnten, entwickelten sie selber eine Lösung. Ziele der neuen Software waren Geschwindigkeit, einfaches Design, gute Unterstützung von nicht linearer Entwicklung, dezentrale Struktur und die Fähigkeit grosse Projekte effektiv zu verwalten. Git wird seit 2005 kontinuierlich weiterentwickelt.&lt;/p>
+&lt;h2 id="name">Name&lt;/h2>
+&lt;p>Der Name „Git“ bedeutet in der britischen Umgangssprache so viel wie „Blödmann“. Linus Torvalds erklärte seine Wahl des ungewöhnlichen Namens mit einem Witz sowie damit, dass das Wort praktikabel und in der Softwarewelt noch weitgehend unbenutzt war:&lt;/p>
+&lt;blockquote>
+&lt;p>„Ich bin ein egoistischer Mistkerl, und ich benenne all meine Projekte nach mir. Zuerst ‚Linux‘, jetzt eben ‚Git‘.“&lt;/p>
+&lt;/blockquote>
+&lt;p>– Linus Torvalds&lt;/p>
+&lt;p>Dazu muss man anmerken, dass Linus den Namen Linux nur widerwillig akzeptierte.&lt;/p>
+&lt;h2 id="wie-funktioniert-git">Wie funktioniert Git&lt;/h2>
+&lt;p>Git funktioniert im Gegensatz zu den meisten anderen Versionsverwaltungen nicht indem es eine Liste von Änderungen an einer Datei abspeichert, sondern eher wie ein Dateisystem, welches bei jedem Commit ein Snapshot aller Dateien anlegt. Um effizient zu bleiben, werden unveränderte Dateien nicht kopiert sondern nur verknüpft. Weiter stellt Git die Integrität aller verwalteten Dateien sicher, indem es eine Prüfsumme jeder Datei anlegt. Dies verunmöglicht Änderungen an Dateien, ohne dass es Git mitbekommen würde.&lt;/p>
+&lt;h3 id="drei-zustände-einer-datei">Drei Zustände einer Datei&lt;/h3>
+&lt;p>Eine Datei in einem Git Repository kann drei (Haupt-) Zustände haben:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Modified&lt;/strong>: Die Datei wurde geändert aber noch nicht in die lokale Datenbank eingecheckt.&lt;/li>
+&lt;li>&lt;strong>Staged&lt;/strong>: Die Datei wurde im aktuellen Zustand für den nächsten Commit vorgemerkt.&lt;/li>
+&lt;li>&lt;strong>Commited&lt;/strong>: Die Datei ist im aktuellen Zustand in die lokale Datenbank eingecheckt.&lt;/li>
+&lt;/ul>
+&lt;h3 id="minimaler-workflow">Minimaler Workflow&lt;/h3>
+&lt;p>Hat man ein Repository von einem anderen Rechner &lt;em>geklont&lt;/em>, kann man eine oder mehrere Dateien im Verzeichnisbaum editieren. Anschliessend &lt;em>staged&lt;/em> man diese Änderungen und &lt;em>commited&lt;/em> diese anschliessend.&lt;/p></description></item><item><title>Docs: Git Basics</title><link>/training-sbb-puzzle/docs/git/git-basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/git-basics/</guid><description>
+&lt;p>Git kann auf unterschiedliche Arten eingesetzt werden, es gibt graphische Oberflächen und die meisten Git-Server Software bieten Weboberflächen, welche das interagieren mit Git Repositories kinderleicht gestalten. Da diese Oberflächen meist sehr Produktspezifisch sind und oft auch nicht alle Funktionen beinhaltet werden hier nur die Kommandozeilen Befehle angeschaut.&lt;/p>
+&lt;h2 id="inhalt">Inhalt&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="#konfiguration-von-git">Konfiguration von Git&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#hilfe">Hilfe&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#ein-git-repository-anlegen">Ein Git Repository anlegen&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#%C3%A4nderungen-verfolgen-und-im-repository-speichern">Änderungen verfolgen und im Repository speichern&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#anzeigen-der-commit-historie">Anzeigen der Commit Historie&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#%C3%A4nderungen-r%C3%BCckg%C3%A4ngig-machen">Änderungen rückgängig machen&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#mit-remotes-arbeiten">Mit Remotes arbeiten&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="konfiguration-von-git">Konfiguration von Git&lt;/h2>
+&lt;p>Git kann, wie die viele Software unter Linux, auf unterschiedlichen Level konfiguriert werden:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>/etc/gitconfig&lt;/code> enthält die Werte, welche für alle Benutzer auf dem System gelten. Die Datei kann mit &lt;code>git config --system&lt;/code> gelesen oder editiert werden. Man braucht Administrator- oder Superuser-Rechte um die Datei zu editieren.&lt;/li>
+&lt;li>&lt;code>~/.gitconfig&lt;/code> oder &lt;code>~/.config/git/config&lt;/code> enthält die Werte, welche für den aktuellen Benutzer konfiguriert sind. Mit &lt;code>git config --global&lt;/code> können Werte gesetzt oder ausgelesen werden.&lt;/li>
+&lt;li>Die Datei &lt;code>config&lt;/code> im &lt;code>.git&lt;/code> Verzeichnis innerhalb eines Repositories enthält die Konfiguration, welche nur für dieses Repository zählt. Das Flag für &lt;code>git config&lt;/code> ist in diesem Fall &lt;code>--local&lt;/code>, ist jedoch in der Regel die Standardoption und kann weggelassen werden.&lt;/li>
+&lt;/ul>
+&lt;p>Jede dieser Konfiguration wird von der nächsten überschrieben, sodass die Repository bezogene Konfiguration den höchsten Wert hat. Um zu die aktuelle Konfiguration und ihren Ursprung anzusehen kann folgender Befehl ausgeführt werden:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git config --list --show-origin
+file:/home/lehrling/.gitconfig user.email&lt;span style="color:#f92672">=&lt;/span>lehrling@puzzle.ch
+file:/home/lehrling/.gitconfig user.name&lt;span style="color:#f92672">=&lt;/span>Lehrling Puzzle
+file:/home/lehrling/.gitconfig push.default&lt;span style="color:#f92672">=&lt;/span>simple
+file:/home/lehrling/.gitconfig merge.tool&lt;span style="color:#f92672">=&lt;/span>meld
+file:.git/config core.repositoryformatversion&lt;span style="color:#f92672">=&lt;/span>&lt;span style="color:#ae81ff">0&lt;/span>
+file:.git/config core.filemode&lt;span style="color:#f92672">=&lt;/span>true
+file:.git/config core.bare&lt;span style="color:#f92672">=&lt;/span>false
+file:.git/config core.logallrefupdates&lt;span style="color:#f92672">=&lt;/span>true
+file:.git/config remote.origin.url&lt;span style="color:#f92672">=&lt;/span>git@github.com:puzzle-bbt/training-sbb-puzzle.git
+file:.git/config remote.origin.fetch&lt;span style="color:#f92672">=&lt;/span>+refs/heads/*:refs/remotes/origin/*
+file:.git/config branch.master.remote&lt;span style="color:#f92672">=&lt;/span>origin
+file:.git/config branch.master.merge&lt;span style="color:#f92672">=&lt;/span>refs/heads/master
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="konfigurationsbeispiele">Konfigurationsbeispiele&lt;/h3>
+&lt;p>Nach der Installation von Git sollte als erstes der Name und die Email Adresse konfiguriert werden, da diese beiden Angaben bei jedem Commit benötigt werden:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git config --global user.name &lt;span style="color:#e6db74">&amp;#34;John Doe&amp;#34;&lt;/span>
+$ git config --global user.email johndoe@example.com
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Wie wir bereits gelernt haben, schreiben wir mit dem &lt;code>--global&lt;/code> Flag in die Konfiguration in unserem &lt;code>home&lt;/code> Verzeichnis und sie gilt somit für alle Repositories, welche wir mit unserem User bearbeiten. Wollen wir dies fur ein bestimmtes Repo übersteuern, haben wir immer noch die Möglichkeit dies mit &lt;code>--local&lt;/code> zu machen.&lt;/p>
+&lt;p>Eine weitere Konfiguration die evtl. hilfreich sein kann ist &lt;code>core.editor&lt;/code> mit welcher, der Texteditor definiert werden kann. Git benutzt, falls hier nichts definiert ist, den standard Editor des Systems.&lt;/p>
+&lt;h2 id="hilfe">Hilfe&lt;/h2>
+&lt;p>Git bietet mehrere Möglichkeit, wie man an Hilfe gelangt, wenn mal einmal nicht weiter weiss:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git help &amp;lt;verb&amp;gt;
+$ git &amp;lt;verb&amp;gt; --help
+$ man git-&amp;lt;verb&amp;gt;
+&lt;span style="color:#75715e"># Kurzversion:&lt;/span>
+$ git &amp;lt;verb&amp;gt; -h
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Wenn man also nicht mehr genau weiss, wie dies mit der Konfiguration von Git funktioniert kann man sich folgendermassen weiterhelfen:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git help config &lt;span style="color:#75715e">#ruft die Manpage auf&lt;/span>
+&lt;span style="color:#f92672">[&lt;/span>..&lt;span style="color:#f92672">]&lt;/span>
+$ git config -h
+usage: git config &lt;span style="color:#f92672">[&lt;/span>&amp;lt;options&amp;gt;&lt;span style="color:#f92672">]&lt;/span>
+Config file location
+--global use global config file
+--system use system config file
+--local use repository config file
+--worktree use per-worktree config file
+-f, --file &amp;lt;file&amp;gt; use given config file
+--blob &amp;lt;blob-id&amp;gt; read config from given blob object
+Action
+--get get value: name &lt;span style="color:#f92672">[&lt;/span>value-regex&lt;span style="color:#f92672">]&lt;/span>
+--get-all get all values: key &lt;span style="color:#f92672">[&lt;/span>value-regex&lt;span style="color:#f92672">]&lt;/span>
+--get-regexp get values &lt;span style="color:#66d9ef">for&lt;/span> regexp: name-regex &lt;span style="color:#f92672">[&lt;/span>value-regex&lt;span style="color:#f92672">]&lt;/span>
+--get-urlmatch get value specific &lt;span style="color:#66d9ef">for&lt;/span> the URL: section&lt;span style="color:#f92672">[&lt;/span>.var&lt;span style="color:#f92672">]&lt;/span> URL
+--replace-all replace all matching variables: name value &lt;span style="color:#f92672">[&lt;/span>value_regex&lt;span style="color:#f92672">]&lt;/span>
+--add add a new variable: name value
+--unset remove a variable: name &lt;span style="color:#f92672">[&lt;/span>value-regex&lt;span style="color:#f92672">]&lt;/span>
+--unset-all remove all matches: name &lt;span style="color:#f92672">[&lt;/span>value-regex&lt;span style="color:#f92672">]&lt;/span>
+--rename-section rename section: old-name new-name
+--remove-section remove a section: name
+-l, --list list all
+-e, --edit open an editor
+--get-color find the color configured: slot &lt;span style="color:#f92672">[&lt;/span>default&lt;span style="color:#f92672">]&lt;/span>
+--get-colorbool find the color setting: slot &lt;span style="color:#f92672">[&lt;/span>stdout-is-tty&lt;span style="color:#f92672">]&lt;/span>
+Type
+-t, --type &amp;lt;&amp;gt; value is given this type
+--bool value is &lt;span style="color:#e6db74">&amp;#34;true&amp;#34;&lt;/span> or &lt;span style="color:#e6db74">&amp;#34;false&amp;#34;&lt;/span>
+--int value is decimal number
+--bool-or-int value is --bool or --int
+--path value is a path &lt;span style="color:#f92672">(&lt;/span>file or directory name&lt;span style="color:#f92672">)&lt;/span>
+--expiry-date value is an expiry date
+Other
+-z, --null terminate values with NUL byte
+--name-only show variable names only
+--includes respect include directives on lookup
+--show-origin show origin of config &lt;span style="color:#f92672">(&lt;/span>file, standard input, blob, command line&lt;span style="color:#f92672">)&lt;/span>
+--show-scope show scope of config &lt;span style="color:#f92672">(&lt;/span>worktree, local, global, system, command&lt;span style="color:#f92672">)&lt;/span>
+--default &amp;lt;value&amp;gt; with --get, use default value when missing entry
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="ein-git-repository-anlegen">Ein Git Repository anlegen&lt;/h2>
+&lt;p>Um lokal ein neues Git Repository anzulegen gibt es zwei Varianten:&lt;/p>
+&lt;ul>
+&lt;li>Umwandeln eines Verzeichnis, welches (noch) nicht mit Git verwaltet wird zu einem Git Repository&lt;/li>
+&lt;li>Klonen eines existierenden Repositories von einem anderen Ort&lt;/li>
+&lt;/ul>
+&lt;h3 id="ein-verzeichnis-zu-einem-git-repository-verwandeln">Ein Verzeichnis zu einem Git Repository verwandeln&lt;/h3>
+&lt;p>Um aus einem Ordner ein Git Repository zu erstellen, muss man zuerst in den Ordner wechseln und anschliessend das Repository initialisieren:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ cd ~/path/to/folder
+$ git init
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Der zweite Befehl erzeugt ein &lt;code>.git&lt;/code> Unterverzeichnis, welches die Repository Daten beinhaltet. Im Moment werden noch keine Dateien von Git verwaltet, sondern die müssen zuerst hinzugefügt (&lt;code>git add&lt;/code>) werden und committed werden (&lt;code>git commit&lt;/code>). Wenn wir von einem leeren Ordner aus gehen, müssen die Dateien natürlich zuerst noch erstellt werden:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ vim README.md
+$ git add README.md
+$ git commit -m &lt;span style="color:#e6db74">&amp;#39;Initial Commit&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="ein-bestehendes-repository-klonen">Ein bestehendes Repository klonen&lt;/h3>
+&lt;p>Um ein Repository zu klonen wird der Befehl &lt;code>git clone&lt;/code> verwendet:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git clone https://github.com/libgit2/libgit2
+$ ls
+libgit2
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Git legt dann automatisch ein Verzeichnis &lt;code>libgit2&lt;/code> an mit allen Dateien und initialisiert das Repository mit einem &lt;code>.git&lt;/code> Verzeichnis im Hauptverzeichnis. Wird hinter der URL noch etwas angegeben, wird dies als Name des Zielverzeichnisses interpretiert:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git clone https://github.com/libgit2/libgit2 mylibgit
+$ ls
+mylibgit
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="änderungen-verfolgen-und-im-repository-speichern">Änderungen verfolgen und im Repository speichern&lt;/h2>
+&lt;p>Zur Erinnerung, eine Datei in einem Git Folder kann vier Zustände haben:&lt;/p>
+&lt;ul>
+&lt;li>Untracked: Die Datei liegt im Ordner, wird aber nicht von Git versioniert&lt;/li>
+&lt;li>Unmodified: Die Datei wird von Git versioniert, sie ist seit dem letzten Commit unverändert.&lt;/li>
+&lt;li>Modified: Die Datei wurde seit dem letzten Commit verändert&lt;/li>
+&lt;li>Staged: eine neue oder editierte Datei wurde für den nächsten Commit vorgemerkt.&lt;/li>
+&lt;/ul>
+&lt;p>Der Befehl zum überprüfen, ob man Dateien in einem anderen Zustand als &lt;code>unmodified&lt;/code> hat ist &lt;code>git status&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git status
+On branch feature/git-basics
+Your branch is up to date with &lt;span style="color:#e6db74">&amp;#39;origin/feature/git-basics&amp;#39;&lt;/span>.
+Changes to be committed:
+&lt;span style="color:#f92672">(&lt;/span>use &lt;span style="color:#e6db74">&amp;#34;git restore --staged &amp;lt;file&amp;gt;...&amp;#34;&lt;/span> to unstage&lt;span style="color:#f92672">)&lt;/span>
+modified: content/en/docs/02.0/02.md
+Changes not staged &lt;span style="color:#66d9ef">for&lt;/span> commit:
+&lt;span style="color:#f92672">(&lt;/span>use &lt;span style="color:#e6db74">&amp;#34;git add &amp;lt;file&amp;gt;...&amp;#34;&lt;/span> to update what will be committed&lt;span style="color:#f92672">)&lt;/span>
+&lt;span style="color:#f92672">(&lt;/span>use &lt;span style="color:#e6db74">&amp;#34;git restore &amp;lt;file&amp;gt;...&amp;#34;&lt;/span> to discard changes in working directory&lt;span style="color:#f92672">)&lt;/span>
+modified: content/en/docs/02.0/02.md
+Untracked files:
+&lt;span style="color:#f92672">(&lt;/span>use &lt;span style="color:#e6db74">&amp;#34;git add &amp;lt;file&amp;gt;...&amp;#34;&lt;/span> to include in what will be committed&lt;span style="color:#f92672">)&lt;/span>
+.gitignore
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Wollen wir nun die Änderungen der Datei &lt;code>content/en/docs/02.0/02.md&lt;/code> (oder die Datei &lt;code>.gitignore&lt;/code>) zum nächsten Commit hinzufügen können wir dies mit &lt;code>git add &amp;lt;pfad/zur/datei&amp;gt;&lt;/code>. Im Beispiel oben sehen wir, dass die Datei &lt;code>content/en/docs/02.0/02.md&lt;/code> bereits gestaged ist. Ändern wir diese Datei erneut, wird die Datei sowohl bei &lt;em>Changes to be committed:&lt;/em> wie auch bei &lt;em>Changes not staged for commit:&lt;/em> auftauchen. Einmal mit den Änderungen, welche wir bereits gestaged haben und einmal mit den Änderungen, welche wir nach dem Stagen (&lt;code>git add&lt;/code>) gemacht haben. Wollen wir beide Änderungen im gleichen Commit, können wir die Datei einfach wieder mit &lt;code>git add&lt;/code> stagen und anschliessend commiten, wollen wir die Änderungen in separaten Commit, commiten wir zuerst die gestagten Änderungen und stagen anschliessend die zweite Änderungen und commiten erneut.&lt;/p>
+&lt;h3 id="gitignore">.gitignore&lt;/h3>
+&lt;p>Bevor wir lernen, wie man seine Änderungen commited wollen wir noch kurz die spezielle Datei &lt;code>.gitignore&lt;/code> anschauen. In dieser Datei können Dateien erfasst werden, welche Git nicht als untracked aufzählen soll, respektive ignorieren soll. Die Datei wird ganz normal wie jede andere auch ins Repo eingecheckt.&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ cat .gitignore
+&lt;span style="color:#75715e"># ignore all .a files&lt;/span>
+*.a
+&lt;span style="color:#75715e"># but do track lib.a, even though you&amp;#39;re ignoring .a files above&lt;/span>
+!lib.a
+&lt;span style="color:#75715e"># only ignore the TODO file in the current directory, not subdir/TODO&lt;/span>
+/TODO
+&lt;span style="color:#75715e"># ignore all files in any directory named build&lt;/span>
+build/
+&lt;span style="color:#75715e"># ignore doc/notes.txt, but not doc/server/arch.txt&lt;/span>
+doc/*.txt
+&lt;span style="color:#75715e"># ignore all .pdf files in the doc/ directory and any of its subdirectories&lt;/span>
+doc/**/*.pdf
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Weitere Informationen bekommt man mit &lt;code>man gitignore&lt;/code> oder unter &lt;a href="https://github.com/github/gitignore">https://github.com/github/gitignore&lt;/a> findet man nützliche Beispiele.&lt;/p>
+&lt;h3 id="überprüfen-der-änderungen">Überprüfen der Änderungen&lt;/h3>
+&lt;p>Bevor man seine Änderungen commited, empfiehlt es sich diese nochmals zu überprüfen. Mit &lt;code>git status&lt;/code> sieht man, welche Dateien geändert wurden, jedoch nicht, was sich geändert hat. Dafür gibt es den Befehl &lt;code>git diff&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-diff" data-lang="diff">diff --git a/content/en/docs/02.0/02.md b/content/en/docs/02.0/02.md
+index 1e6db46..dd7161b 100644
+&lt;span style="color:#f92672">--- a/content/en/docs/02.0/02.md
+&lt;/span>&lt;span style="color:#f92672">&lt;/span>&lt;span style="color:#a6e22e">+++ b/content/en/docs/02.0/02.md
+&lt;/span>&lt;span style="color:#a6e22e">&lt;/span>&lt;span style="color:#75715e">@@ -145,3 +145,60 @@ mylibgit
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>
+## Änderungen verfolgen und im Repository speichern
+&lt;span style="color:#a6e22e">+Zur Erinnerung, eine Datei in einem Git Folder kann vier Zustände haben:
+&lt;/span>&lt;span style="color:#a6e22e">&lt;/span>&lt;span style="color:#f92672">-Zur Erinnerung, eine Datei in einem Git Folder kann vier Zustaende haben
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>git diff&lt;/code> vergleicht die Änderungen welche noch nicht gestaged wurden, will man bereits gestagte Änderungen überprüfen braucht es zusätzlich das Flag &lt;code>--staged&lt;/code> oder &lt;code>--cached&lt;/code> (die beiden Flags sind Synonyme).&lt;/p>
+&lt;h3 id="commiten">Commiten&lt;/h3>
+&lt;p>Ist man sicher, dass man nur die Änderungen gestaged hat, welche man auch commiten will, kann man dies mit dem Befehl &lt;code>git commit&lt;/code> bewerkstelligen. Dadurch wird ein Editor geöffnet und man wird gebeten eine Beschreibung für die Änderungen anzugeben. Wie solche Beschreibungen gestaltet werden sollen und was alles in eine &amp;ldquo;Commit Message&amp;rdquo; gehört, darüber gibt es ganz unterschiedliche Meinungen. Idealerweise probiert man sich vorzustellen, was man an Zusätzlichen Informationen braucht, wenn man die Änderungen in zwei Jahren wieder anschaut, um zu verstehen, was und warum das geändert wurde.&lt;/p>
+&lt;p>Ein paar hilfreiche Flags zu &lt;code>git commit&lt;/code>:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-m&lt;/code> um eine Message gleich anzugeben und nicht den Editor zu öffnen (kann je nach Commit Message Guideline hinderlich sein, da es keine Multiline Kommentare erlaubt):&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">git commit -m &lt;span style="color:#e6db74">&amp;#34;Story 182: added important Information to Readme&amp;#34;&lt;/span>
+&lt;span style="color:#f92672">[&lt;/span>master 463dc4f&lt;span style="color:#f92672">]&lt;/span> Story 182: added important Information to Readme
+&lt;span style="color:#ae81ff">2&lt;/span> files changed, &lt;span style="color:#ae81ff">2&lt;/span> insertions&lt;span style="color:#f92672">(&lt;/span>+&lt;span style="color:#f92672">)&lt;/span>
+create mode &lt;span style="color:#ae81ff">100644&lt;/span> README
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;code>-a&lt;/code> um alle editierten Dateien gleich mitzustagen. (Kurzform von &lt;code>git add --all &amp;amp;&amp;amp; git commit&lt;/code>) &lt;strong>!ACHTUNG!&lt;/strong> kann gefährlich sein da so schnell Änderungen in einen Commit rutschen die nicht rein gehören!&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>-v&lt;/code> um ein &lt;code>git diff --staged&lt;/code> im Editor angezeigt zu bekommen. So muss man sich nicht merken, was man eigentlich geändert hat und bekommt es beim schreiben der Commit Message noch einmal präsentiert.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>WICHTIG:&lt;/strong> Es ist einiges einfacher Fehler vor dem Commiten als nach dem Commiten zu beheben, ein zweites mal über die Änderungen schauen ist sehr empfehlenswert!&lt;/p>
+&lt;h3 id="dateien-löschen">Dateien löschen&lt;/h3>
+&lt;p>Um eine Datei zu löschen muss diese zuerst entfernt und dann gestaged werden, damit dies in der Git Datenbank ankommt. Um nicht zuerst &lt;code>rm foo&lt;/code> und dann &lt;code>git add foo&lt;/code> eingeben zu müssen, gibt es den Befehl &lt;code>git rm foo&lt;/code>. Will man eine bereits gestagte Datei aus der Versionsverwaltung jedoch nicht vom Filesystem löschen, weil man diese zum Beispiel im &lt;code>.gitignore&lt;/code> ergänzen möchte, dann kann man dies mit &lt;code>git rm --cached foo&lt;/code> erledigen.&lt;/p>
+&lt;p>&lt;strong>WICHTIG:&lt;/strong> Jede Datei die irgendwann mal commited wurde ist für immer in der Git Geschichte und kann nur durch neu schreiben der selbigen wieder entfernt werden. Wer also zum Beispiel sein Passwort commited weil dies in einer &lt;code>secret.yml&lt;/code> Datei steht, der sollte sich sofort bei einem 10x-Git-Profi-Engineer Hilfe holen.&lt;/p>
+&lt;h3 id="dateien-verschieben">Dateien Verschieben&lt;/h3>
+&lt;p>Genauso wie löschen, muss auch beim Verschieben die Änderung Git mitgeteilt werden: &lt;code>mv README.md README &amp;amp;&amp;amp; git rm README.md &amp;amp;&amp;amp; git add README&lt;/code> oder in kurz und hübsch: &lt;code>git mv README.md README&lt;/code>.&lt;/p>
+&lt;h2 id="anzeigen-der-commit-historie">Anzeigen der Commit Historie&lt;/h2>
+&lt;p>Um die Geschichte eines Git Repositories anzuzeigen gibt es den Befehl &lt;code>git log&lt;/code>. Ohne Argumente zeigt &lt;code>git log&lt;/code> die Commits in umgekehrter chronologischer Reihenfolge, sprich jüngster Commit zuoberst. Pro Commit wird jeweils der Commit-Hash, der Name und Email Adresse des Authors, das Datum und die Commit-Message angezeigt. Um die effektiven Änderungen anzuzeigen gibt es das &lt;code>-p&lt;/code> oder &lt;code>--patch&lt;/code> Flag verwendet werden. Da der Output schnell gross wird und man wahrscheinlich auch nicht bis an den Ursprung der Geschichte zurück will empfiehlt es sich die Anzahl Commits anzugeben, will man zum Beispiel die letzten drei Commits anschauen macht man dies mit &lt;code>-3&lt;/code>. Oder man schränkt die Änderungen basierend auf die Zeit ein mit &lt;code>--since=&lt;/code> und &lt;code>--until=&lt;/code> ein (es werden die unterschiedlichsten Zeitangaben akzeptiert, am besten probiert man etwas aus. Bsp: &lt;code>--since=2.weeks&lt;/code> oder &lt;code>--until=&amp;quot;2020-06-03&amp;quot;&lt;/code>). Auch mit &lt;code>--grep&lt;/code> oder &lt;code>--author&lt;/code> kann man die Resultate einschränken. Weitere Information liefert die Manpage &lt;code>man git log&lt;/code> und die Hilfefunktion &lt;code>git log -h&lt;/code>.&lt;/p>
+&lt;h2 id="änderungen-rückgängig-machen">Änderungen rückgängig machen&lt;/h2>
+&lt;p>Wo gehobelt wird fallen Späne. Die meisten Schnitzer kann man jedoch selber wieder ausglätten. Am häufigsten committed man wohl zu schnell, hat eine Datei vergessen dazuzufügen oder hat sich bei der Commit Message vertan. Hier kann man ganz einfach die Änderungen noch vornehmen und an den letzten Commit berichtigen mit &lt;code>git commit --amend&lt;/code> (Wichtig, man editiert nicht den letzten Commit, sondern man löscht ihn und erstellt eine korrigierte neue Version davon. Dies kann dazuführen, dass ein Remote den Commit nicht mehr annimmt, da die History nicht mehr übereinstimmt. Aber mehr dazu später.)&lt;/p>
+&lt;p>Um eine gestagte Datei wieder zu modified (aber eben nicht gestaged) zu verschieben kann man &lt;code>git reset HEAD &amp;lt;file&amp;gt;&lt;/code> verwenden. Um die Änderungen einer Datei rückgängig zu machen (also modified zu unmodified)
+kann sie neu ausgecheckt werden mit &lt;code>git checkout -- &amp;lt;file&amp;gt;&lt;/code>. &lt;strong>Achtung&lt;/strong> Alle Änderungen seit dem letzte Commit gehen damit verloren!!! Wenn man sich an die beiden Befehle gerade mal nicht erinnern kann, dann kann man einfach ein &lt;code>git status&lt;/code> eingeben und den Hilfetext studieren 😉.&lt;/p>
+&lt;h2 id="mit-remotes-arbeiten">Mit Remotes arbeiten&lt;/h2>
+&lt;p>Um mit anderen an einem Git-Projekt mitarbeiten zu können, braucht es Remotes, sprich eine Version des Projekts im Netzwerk, wo alle Beteiligten ihre Änderungen hin pushen und die Änderungen der Anderen pullen können.&lt;/p>
+&lt;p>Nachdem man ein Repo gecloned hat sieht man ein Remote, man kann jedoch auch weitere definieren:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git clone git@github.com:puzzle-bbt/training-sbb-puzzle.git
+Cloning into &lt;span style="color:#e6db74">&amp;#39;training-sbb-puzzle&amp;#39;&lt;/span>...
+remote: Enumerating objects: 8485, &lt;span style="color:#66d9ef">done&lt;/span>.
+remote: Counting objects: 100% &lt;span style="color:#f92672">(&lt;/span>8485/8485&lt;span style="color:#f92672">)&lt;/span>, &lt;span style="color:#66d9ef">done&lt;/span>.
+remote: Compressing objects: 100% &lt;span style="color:#f92672">(&lt;/span>5276/5276&lt;span style="color:#f92672">)&lt;/span>, &lt;span style="color:#66d9ef">done&lt;/span>.
+remote: Total &lt;span style="color:#ae81ff">8485&lt;/span> &lt;span style="color:#f92672">(&lt;/span>delta 3095&lt;span style="color:#f92672">)&lt;/span>, reused &lt;span style="color:#ae81ff">8456&lt;/span> &lt;span style="color:#f92672">(&lt;/span>delta 3079&lt;span style="color:#f92672">)&lt;/span>, pack-reused &lt;span style="color:#ae81ff">0&lt;/span>
+Receiving objects: 100% &lt;span style="color:#f92672">(&lt;/span>8485/8485&lt;span style="color:#f92672">)&lt;/span>, 17.06 MiB | 5.11 MiB/s, &lt;span style="color:#66d9ef">done&lt;/span>.
+Resolving deltas: 100% &lt;span style="color:#f92672">(&lt;/span>3095/3095&lt;span style="color:#f92672">)&lt;/span>, &lt;span style="color:#66d9ef">done&lt;/span>.
+$ cd training-sbb-puzzle
+$ git remote
+origin
+$ git remote -v
+origin git@github.com:puzzle-bbt/training-sbb-puzzle.git &lt;span style="color:#f92672">(&lt;/span>fetch&lt;span style="color:#f92672">)&lt;/span>
+origin git@github.com:puzzle-bbt/training-sbb-puzzle.git &lt;span style="color:#f92672">(&lt;/span>push&lt;span style="color:#f92672">)&lt;/span>
+$ git remote add private git remote add private git@github.com:Lehrling/training-sbb-puzzle.git
+$ git remote -v
+origin git@github.com:puzzle-bbt/training-sbb-puzzle.git &lt;span style="color:#f92672">(&lt;/span>fetch&lt;span style="color:#f92672">)&lt;/span>
+origin git@github.com:puzzle-bbt/training-sbb-puzzle.git &lt;span style="color:#f92672">(&lt;/span>push&lt;span style="color:#f92672">)&lt;/span>
+private git@github.com:Lehrling/training-sbb-puzzle.git &lt;span style="color:#f92672">(&lt;/span>fetch&lt;span style="color:#f92672">)&lt;/span>
+private git@github.com:Lehrling/training-sbb-puzzle.git &lt;span style="color:#f92672">(&lt;/span>push&lt;span style="color:#f92672">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Wollen wir nun alle Information holen, welches der Lehrling hat, jedoch noch nicht im Repo sind kann man dies mit &lt;code>git fetch private&lt;/code> ausführen.&lt;/p>
+&lt;h3 id="fetching-und-pulling">Fetching und Pulling&lt;/h3>
+&lt;p>Es gibt zwei Arten, wie man Daten von einem Remote abholen kann, nach dem man das Repo gecloned hat.&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>git fetch &amp;lt;remote&amp;gt;&lt;/code>: holt alle Änderungen vom Remote seit dem letzten abholen und speichert die lokal. Wichtig zu beachten ist, dass &lt;code>git fetch&lt;/code> die Änderungen nicht mit den lokalen Änderungen zusammenfügt, sondern dies manuell ausgeführt werden muss.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>git pull&lt;/code>: Wenn der lokale Branch mit einem remote Branch verknüpft ist, holt &lt;code>git pull&lt;/code> die Änderungen dieses remotes und fügt sie gleich mit den Änderungen im lokalen Branch zusammen (merge). Was Branches sind und wie ein Merge funktioniert schauen wir uns in kürze an, nur soviel, wird ein Repo gecloned, wird der lokale sogenannte &lt;code>master&lt;/code> Branch mit dem &lt;code>master&lt;/code> Branch des &lt;code>origin&lt;/code> Remotes verknüpft.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="pushen">Pushen&lt;/h3>
+&lt;p>Wenn man seine Änderungen soweit hat, dass man sie mit dem Rest vom Team teilen will, dann kann man diese mit &lt;code>git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code> auf den Server laden. Dies funktioniert jedoch nur, wenn man auf dem Server auch Schreibrechte hat und niemand anderes vor einem gepusht hat.&lt;/p></description></item><item><title>Docs: Maven und Continuous Integration</title><link>/training-sbb-puzzle/docs/java/maven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/maven/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich kenne die Grundlagen von Maven&lt;/li>
@@ -3201,7 +3697,483 @@ return &amp;#34;&amp;#34;;
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Wie wir sehen fällt der finally-Block zum Schliessen der Ressourcen komplett weg. Die beiden Ressourcen FileReader und BufferedReader werden automatisch geschlossen. Dies geschieht im Hintergrund über die Methode close, welche vom Interface AutoCloseable zur Verfügung gestellt wird. In einem try-with-resources Statement dürfen also nur Objekte vorliegen, welches das genannte Interface implementieren. Das Closeable-Interface mit der gleichen Funktion stellt dabei die Abwärtskompatibilität zu älteren Java-Versionen sicher. Grundsätzlich soll das Closeable-Interface für IO Streams verwendet werden, da es mit IOExceptions arbeitet.&lt;/p>
-&lt;p>Das Schliessen der Ressourcen hat stets die Reihenfolge von hinten nach vorne. In unserem Beispiel wird also zuerst der BufferedReader geschlossen und danach der FileReader. Die Verkettung von Ressourcen innerhalb eines try-with-resources Statements ist zu vermeiden. Besser sind separate Deklarationen wie oben gezeigt.&lt;/p></description></item><item><title>Docs: Annotationen &amp; Reflection API</title><link>/training-sbb-puzzle/docs/java/reflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/reflection/</guid><description>
+&lt;p>Das Schliessen der Ressourcen hat stets die Reihenfolge von hinten nach vorne. In unserem Beispiel wird also zuerst der BufferedReader geschlossen und danach der FileReader. Die Verkettung von Ressourcen innerhalb eines try-with-resources Statements ist zu vermeiden. Besser sind separate Deklarationen wie oben gezeigt.&lt;/p></description></item><item><title>Docs: Git Branches</title><link>/training-sbb-puzzle/docs/git/git-branches/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/git-branches/</guid><description>
+&lt;h2 id="inhalt">Inhalt&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="#beispiel-f%C3%BCr-branching-merging-und-rebasing">Beispiel für Branching, Merging und Rebasing&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#einfache-mergekonflikte">Einfache Mergekonflikte&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>Im vorherigen Kapitel haben wir gelernt, dass man nur dann seine Änderungen pushen kann, wenn einem niemand anders zuvorkam. Um diesem Problem aus dem Weg zu gehen, kann ein Branch (engl. für Ast/Zweig) verwendet werden, welcher zu einem späteren Zeitpunkt wieder auf den Hauptpfad gemerged wird.&lt;/p>
+&lt;p>Im ersten Kapitel haben wir gelernt, dass Git mit jedem Commit ein Snapshot der Daten und eine Referenz auf den vorgehenden Commit speichert. Ein Branch ist nichts anderes als ein Zeiger auf einen spezifischen Snapshot.&lt;/p>
+&lt;p>Erzeugen wir mit &lt;code>git branch testing&lt;/code> einen neuen Branch namens &amp;ldquo;testing&amp;rdquo; so wird ein Zeiger erstellt, welcher auf den selben Commit zeigt auf dem man sich im Moment befindet. Damit Git weiss, wo man sich im Moment gerade befindet gibt es einen speziellen Zeiger namens &lt;code>HEAD&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-txt" data-lang="txt"> +----------+
+| HEAD |
++----+-----+
+|
+v
++----+-----+
+| master |
++----+-----+
+|
+v
++----------+ +----------+ +----+-----+
+| Commit 1 +&amp;lt;-------+ Commit 2 +&amp;lt;-------+ Commit 3 |
++----------+ +----------+ +----+-----+
+^
+|
++----+-----+
+| testing |
++----------+
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Wie man auf der Skizze erkennen kann, wurde der neue Branch &amp;ldquo;testing&amp;rdquo; erstellt, wir befinden uns aber immer noch auf dem &amp;ldquo;master&amp;rdquo; Branch (HEAD). Um nun auf den neuen Branch zu wechseln können wir den Befehl &lt;code>git checkout testing&lt;/code> verwenden. &lt;em>Protipp&lt;/em>: Um einen neuen Branch zu erstellen und gleich auf diesen zu wechseln, kann der Befehl &lt;code>git checkout -b &amp;lt;branchname&amp;gt;&lt;/code> verwendet werden.&lt;/p>
+&lt;p>Erstellen wir nun einen Commit auf dem &amp;ldquo;testing&amp;rdquo; Branch, dann zeigt sich folgendes Bild:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-txt" data-lang="txt"> +----+-----+
+| master |
++----+-----+
+|
+v
++----------+ +----------+ +----------+ +----------+
+| Commit 1 +&amp;lt;-------+ Commit 2 +&amp;lt;-------+ Commit 3 |&amp;lt;-------+ Commit 4 |
++----------+ +----------+ +----------+ +----------+
+^
+|
++----------+
+| testing |
++----+-----+
+^
+|
++----------+
+| HEAD |
++----+-----+
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="beispiel-für-branching-merging-und-rebasing">Beispiel für Branching, Merging und Rebasing&lt;/h2>
+&lt;p>In diesem Abschnitt wird davon ausgegangen, dass es einen Fehler im aktuellen &lt;code>master&lt;/code>-Branch gibt, der unter &lt;code>testing&lt;/code> nicht behoben wurde, da er zur Entwicklung neuer Funktionen verwendet wird. Um den Fehler zu beheben, wird ein neuer Branch mit dem Namen &lt;code>bugfix&lt;/code> erstellt, der mit der gleichen Revision wie &lt;code>master&lt;/code> beginnt.&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git checkout master
+Switched to branch &lt;span style="color:#e6db74">&amp;#39;master&amp;#39;&lt;/span>
+$ git checkout -b bugfix
+Switched to a new branch &lt;span style="color:#e6db74">&amp;#39;bugfix&amp;#39;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="git-commit">git commit&lt;/h3>
+&lt;p>Nachdem der Branch &lt;code>bugfix&lt;/code> erstellt und ausgecheckt wurde, wird die Korrektur entwickelt und übertragen.&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git diff
+diff --git a/first-file.txt b/first-file.txt
+index 4c5fd91..aa24abd &lt;span style="color:#ae81ff">100644&lt;/span>
+--- a/first-file.txt
++++ b/first-file.txt
+@@ -1 +1 @@
+-First file
++First file with bugfix
+$ git commit -a -m &lt;span style="color:#e6db74">&amp;#34;Bugfix for first file&amp;#34;&lt;/span>
+&lt;span style="color:#f92672">[&lt;/span>bugfix a27a927&lt;span style="color:#f92672">]&lt;/span> Bugfix &lt;span style="color:#66d9ef">for&lt;/span> first file
+&lt;span style="color:#ae81ff">1&lt;/span> file changed, &lt;span style="color:#ae81ff">1&lt;/span> insertion&lt;span style="color:#f92672">(&lt;/span>+&lt;span style="color:#f92672">)&lt;/span>, &lt;span style="color:#ae81ff">1&lt;/span> deletion&lt;span style="color:#f92672">(&lt;/span>-&lt;span style="color:#f92672">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>Die erste Zeile in &lt;code>first-file.txt&lt;/code> wurde geändert, indem &lt;code>with bugfix&lt;/code> zur ersten Zeile hinzugefügt wurde.&lt;/li>
+&lt;/ul>
+&lt;p>Mit der neuen Übergabe an &lt;code>bugfix&lt;/code> fangen die Branches an, auseinanderzulaufen.&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-txt" data-lang="txt">
++----------+
+| testing |
++----------+ +----+-----+
+| master | |
++----+-----+ v
+| +----+-----+
+v + Commit 4 |
++----------+ +----------+ +----+-----+&amp;lt;-------+----------+
+| Commit 1 +&amp;lt;-------| Commit 2 +&amp;lt;-------+ Commit 3 +
++----------+ +----------+ +----------+&amp;lt;-------+----------+
++ commit 5 |
++----+-----+
+^
+|
++----+-----+
+| bugfix |
++----+-----+
+^
+|
++----+-----+
+| HEAD |
++----+-----+
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="mergen-der-branches">Mergen der Branches&lt;/h3>
+&lt;p>Nach der Fehlerbehebung ist es nun an der Zeit, sie wieder in den Master-Branch einzubinden, damit andere Benutzer sie ebenfalls verwenden können.&lt;/p>
+&lt;h4 id="git-merge">git merge&lt;/h4>
+&lt;p>Merge ist eine Wiederholung der Änderungen eines benannten Commits (auch Branch genannt) in einen anderen Branch, da diese voneinander abwichen. Damit dies funktioniert, ändert man zuerst den Zielbranch. In diesem Fall ist das &lt;code>bugfix&lt;/code>. Die Änderungen sollen nach &lt;code>master&lt;/code> zurückgespielt werden. Da das Ziel &lt;code>master&lt;/code> ist, ist der erste Schritt, zu diesem Branch zu wechseln.&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git checkout master
+Switched to branch &lt;span style="color:#e6db74">&amp;#39;master&amp;#39;&lt;/span>
+$ git branch
+* master
+testing
+bugfix
+$ git merge bugfix
+Updating e303af7..a27a927
+Fast-forward
+first-file.txt | &lt;span style="color:#ae81ff">2&lt;/span> +-
+&lt;span style="color:#ae81ff">1&lt;/span> file changed, &lt;span style="color:#ae81ff">1&lt;/span> insertion&lt;span style="color:#f92672">(&lt;/span>+&lt;span style="color:#f92672">)&lt;/span>, &lt;span style="color:#ae81ff">1&lt;/span> deletion&lt;span style="color:#f92672">(&lt;/span>-&lt;span style="color:#f92672">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>Wechseln Sie zum Zielbranch (&lt;code>master&lt;/code>).&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Bestätigen Sie, dass Sie sich im Zielbranch befinden. Dieser Schritt ist optional.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Wiederholen Sie die Änderungen von &lt;code>bugfix&lt;/code> in &lt;code>master&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Nach der Zusammenführung zeigen &lt;code>bugfix&lt;/code> und &lt;code>master&lt;/code> auf dieselbe Revision.!&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-txt" data-lang="txt"> +----+-----+
+| HEAD |
++----+-----+
++----------+ |
+| testing | v
++----+-----+ +----------+
+| | master |
+v +----+-----+
++----+-----+ |
++ Commit 4 | v
++----------+ +----------+ +----+-----+&amp;lt;-------+----------+ +----+-----+
+| Commit 1 +&amp;lt;-------| Commit 2 +&amp;lt;-------+ Commit 3 +&amp;lt;--------------------------+ commit 5 |
++----------+ +----------+ +----------+ +----+-----+
+^
+|
++----+-----+
+| bugfix |
++----+-----+
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h4 id="git-branch--d">git branch -d&lt;/h4>
+&lt;p>Es gibt keinen Grund mehr, den &lt;code>bugfix&lt;/code>-Branch beizubehalten, da die Änderungen nun in &lt;code>master&lt;/code> eingearbeitet wurden. Mit dem Befehl &lt;code>branch -d &amp;lt;branchname&amp;gt;&lt;/code> wird der Branch gelöscht.&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git branch
+bugfix
+* master
+testing
+$ git branch -d bugfix
+Deleted branch bugfix &lt;span style="color:#f92672">(&lt;/span>was a27a927&lt;span style="color:#f92672">)&lt;/span>.
+$ git log --oneline -n &lt;span style="color:#ae81ff">1&lt;/span>
+a27a927 &lt;span style="color:#f92672">(&lt;/span>HEAD -&amp;gt; master&lt;span style="color:#f92672">)&lt;/span> Bugfix &lt;span style="color:#66d9ef">for&lt;/span> first file
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>Der Branch kann beim Auschecken nicht gelöscht werden. Der aktive Branch ist &lt;code>master&lt;/code>, der für die Löschung von &lt;code>bugfix&lt;/code> funktioniert.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Der Branch wird gelöscht und die Ausgabe enthält den kurzen SHA1-Hash.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Die Überprüfung mit &lt;code>git log&lt;/code> bestätigt, dass &lt;code>master&lt;/code> auf denselben Hash zeigt wie &lt;code>bugfix&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Nachdem der Branch &lt;code>bugfix&lt;/code> gelöscht wurde, bleiben nur noch &lt;code>master&lt;/code> und &lt;code>testing&lt;/code> übrig.&lt;/p>
+&lt;h3 id="rebasing-branches">Rebasing Branches&lt;/h3>
+&lt;p>Nachdem die Fehlerkorrektur in den Branch &lt;code>master&lt;/code> eingebracht wurde, ist der nächste logische Schritt, die Änderungen in den Branch &lt;code>testing&lt;/code> einzubringen, um sicherzustellen, dass der nächste Release die korrigierte Version enthält. Wenn man mit mehreren Branches arbeitet, ist diese Operation notwendig, um nicht zu weit in den &lt;code>master&lt;/code> zurückzufallen und viele Merge-Konflikte zu vermeiden.&lt;/p>
+&lt;h4 id="git-rebase">git rebase&lt;/h4>
+&lt;p>Rebase bedeutet, dass der übergeordnete Commit der ersten Änderung im Branch verschoben und an den aktuellen Zeiger des Branches oder Commits angehängt wird, der in der Befehlszeile als Argument angegeben wird. Im folgenden Beispiel wechseln wir als erstes in den Branch, der rebase werden soll, und geben dann den Befehl &lt;code>rebase&lt;/code> gegen &lt;code>master&lt;/code> aus.&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git branch
+* master
+testing
+$ git checkout testing
+Switched to branch &lt;span style="color:#e6db74">&amp;#39;testing&amp;#39;&lt;/span>
+$ git rebase master
+Successfully rebased and updated refs/heads/testing.
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>Derzeit auf dem Branch &lt;code>master&lt;/code>, muss vor dem rebase auf &lt;code>testing&lt;/code> wechseln.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Wechseln Sie zum Branch &lt;code>testing&lt;/code>, der mit &lt;code>master&lt;/code> rebased wird.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Erteilen Sie den Befehl rebase mit dem Argument &lt;code>master&lt;/code>, dem Branch oder Zeiger, der für den rebase verwendet wird.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Die Meldung ist knapp und bezieht sich auf die git-interne Dateistruktur unter dem Verzeichnis &lt;code>.git&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;strong>Hinweis&lt;/strong>&lt;/p>
+&lt;p>Die Durchführung eines rebase zwischen zwei Branches erfordert einen gemeinsamen Vorfahren im Tree.&lt;/p>
+&lt;/blockquote>
+&lt;p>Nach dem Rebase sind &amp;ldquo;Master&amp;rdquo; und &amp;ldquo;Testing&amp;rdquo; wieder synchronisiert.&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-txt" data-lang="txt"> +----+-----+
+| master |
++----+-----+
+|
+v
++----------+ +----------+ +----------+ +----------+ +----------+
+| Commit 1 +&amp;lt;-------| Commit 2 +&amp;lt;-------+ Commit 3 +&amp;lt;-------+ Commit 5 |&amp;lt;-------+ Commit 4 |
++----------+ +----------+ +----------+ +----------+ +----------+
+^
+|
++----------+
+| testing |
++----+-----+
+^
+|
++----------+
+| HEAD |
++----+-----+
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="einfache-mergekonflikte">Einfache Mergekonflikte&lt;/h2>
+&lt;p>Im oben erwähnten Beispiel ist alles automatisch gegangen beim Mergen, es gibt jedoch Fälle, bei denen Git nicht mehr in der Lage ist automatisch die Dateien Zusammenzuführen, wenn zum Beispiel eine Änderung an der gleichen Stelle einer Datei in beiden Branches vorgenommen wird. Gehen wir vom Beispiel oben aus, die Story die man da umsetzt macht auch etwas mit dem Dashboard welches wir kurzum anpassen mussten:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git merge bugfix
+Auto-merging first-file.txt
+CONFLICT &lt;span style="color:#f92672">(&lt;/span>content&lt;span style="color:#f92672">)&lt;/span>: Merge conflict in first-file.txt
+Automatic merge failed; fix conflicts and &lt;span style="color:#66d9ef">then&lt;/span> commit the result.
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Git konnte nicht automatisch mergen und hat somit keinen commit erstellt, wir müssen den Mergekonflikt von Hand lösen, bevor wir weiter arbeiten können. Weitere Infos liefert &lt;code>git status&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git status
+On branch master
+You have unmerged paths.
+&lt;span style="color:#f92672">(&lt;/span>fix conflicts and run &lt;span style="color:#e6db74">&amp;#34;git commit&amp;#34;&lt;/span>&lt;span style="color:#f92672">)&lt;/span>
+&lt;span style="color:#f92672">(&lt;/span>use &lt;span style="color:#e6db74">&amp;#34;git merge --abort&amp;#34;&lt;/span> to abort the merge&lt;span style="color:#f92672">)&lt;/span>
+Unmerged paths:
+&lt;span style="color:#f92672">(&lt;/span>use &lt;span style="color:#e6db74">&amp;#34;git add &amp;lt;file&amp;gt;...&amp;#34;&lt;/span> to mark resolution&lt;span style="color:#f92672">)&lt;/span>
+both modified: first-file.txt
+no changes added to commit &lt;span style="color:#f92672">(&lt;/span>use &lt;span style="color:#e6db74">&amp;#34;git add&amp;#34;&lt;/span> and/or &lt;span style="color:#e6db74">&amp;#34;git commit -a&amp;#34;&lt;/span>&lt;span style="color:#f92672">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Git fügt automatisch eine Markierung in die Dateien ein, welche gmerged werden müssen:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-diff" data-lang="diff">&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
+first line from master
+=======
+first line from testing
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; testing
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Das bedeutet, dass der HEAD (also der Masterbranch, weil auf den haben wir vor dem Mergen gewechselt) den oberen Teil (also immer alles auf Grün) und unsere neuen Änderungen den unteren Teil auf dieser Zeile hatten. Man kann den Konflikt nun lösen, indem man den ganzen Block, mit der gewünschten Änderung ersetzt. Ist der Konflikt gelöst, können wir die Datei ganz normal stagen und commiten. Gerade bei grösseren Mergekonflikten kann es praktisch sein mit tools zu Arbeiten, welche einem die Unterschiede zwischen den beiden Branches Grafisch darstellen, dafür gibt es den Befehl &lt;code>git mergetool&lt;/code>.&lt;/p>
+&lt;p>In der Regel können viele Merge-Konflikte verhindert oder minimiert werden, indem:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Regelmässige Kommunikation von Änderungen zwischen Teammitgliedern.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Regelmässige Rebases mit dem Merge-Zielbranch.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Erstellen kleiner und atomarer Commits.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Annotationen &amp; Reflection API</title><link>/training-sbb-puzzle/docs/java/reflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/reflection/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich kann mit Reflection Informationen zur Laufzeit zu Klassen, Objekten, Methoden und Attributen ermitteln&lt;/li>
@@ -3769,4 +4741,205 @@ System.out.println(documentation.functionality());
 }
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>Durch eine solche Auswertung liesse sich beispielsweise eine automatische Dokumentation generieren.&lt;/p></description></item></channel></rss>
+&lt;/div>&lt;p>Durch eine solche Auswertung liesse sich beispielsweise eine automatische Dokumentation generieren.&lt;/p></description></item><item><title>Docs:</title><link>/training-sbb-puzzle/docs/git/04/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/04/</guid><description>
+&lt;h1 id="git-server">Git Server&lt;/h1>
+&lt;!-- Vielleicht anderes Program -->
+&lt;p>Im Kapitel 2 haben wir &lt;code>git init&lt;/code> bereits kennengelernt. Um ein Git Repository zur Kollaboration anzulegen, sind weitere Schritte nötig. Dies behandelt dieses Kapitel. Voraussetzung für dieses Kapitel ist SSH Zugriff inkl. Root Berechtigung auf ein beliebiges Linux System.&lt;/p>
+&lt;h2 id="git-protokolle">Git Protokolle&lt;/h2>
+&lt;p>Um auf ein entferntes Git Repository zuzugreifen, gibt es in der Regel zwei Varianten:&lt;/p>
+&lt;ul>
+&lt;li>HTTPS&lt;/li>
+&lt;li>SSH&lt;/li>
+&lt;/ul>
+&lt;p>Beide Protokolle bieten standardmässig Verschlüsselung, Authentifizierung und Komprimierung.&lt;/p>
+&lt;h3 id="git-über-https">Git über HTTPS&lt;/h3>
+&lt;p>Kurze Wiederholung: Um ein Repository über HTTPS zu klonen verwendet man&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git clone https://github.com/kelseyhightower/nocode.git
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Dies ist die einfachste Variante um Code schnell herunterzuladen und lokal im eigenen Editor zu betrachten.&lt;/p>
+&lt;p>Vorteile:&lt;/p>
+&lt;ul>
+&lt;li>Anonymer Zugriff möglich&lt;/li>
+&lt;li>Zugriff für Systeme, auf denen SSH weniger verbreitet ist&lt;/li>
+&lt;li>HTTPS ist auf vielen Corporate Firewalls standardmässig offen&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;p>Nachteile:&lt;/p>
+&lt;ul>
+&lt;li>Zwischenspeicherung der Anmeldedaten weniger benutzerfreundlich als mit SSH Keys&lt;/li>
+&lt;li>Konfiguration des Webservers etwas komplizierter als die von SSH&lt;/li>
+&lt;/ul>
+&lt;h3 id="git-über-ssh">Git über SSH&lt;/h3>
+&lt;p>Um ein Repository mit SSH zu klonen, kommt folgender Befehl zum Einsatz:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git clone git@github.com:cajotafer/10xengineers.git
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Für die meisten Anwendungsfälle ist dies der bevorzugte Weg um entfernte Git Repositories zu verwenden.&lt;/p>
+&lt;p>Vorteile:&lt;/p>
+&lt;ul>
+&lt;li>SSH ist auf jedem Linux System bereits vorinstalliert (server- wie clientseitig)&lt;/li>
+&lt;li>SSH Server sind sehr einfach zu konfigurieren&lt;/li>
+&lt;li>Der Zugriff via SSH ist sehr sicher&lt;/li>
+&lt;/ul>
+&lt;p>Nachteile:&lt;/p>
+&lt;ul>
+&lt;li>Bietet keinen anonymen Zugriff&lt;/li>
+&lt;/ul>
+&lt;h3 id="weitere-möglichkeiten">Weitere Möglichkeiten&lt;/h3>
+&lt;ul>
+&lt;li>File
+&lt;ul>
+&lt;li>Die wohl einfachste Möglichkeit um ein Git Repository mit anderen zusammen zu nutzen&lt;/li>
+&lt;li>Repository kann z.B. auf einem gemeinsam genutzen NFS Share liegen, von dem man danach lokal das Repository klont&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Git Protokoll
+&lt;ul>
+&lt;li>Unterstützt keine Authentifizierung&lt;/li>
+&lt;li>Wird deswegen sinnvollerweise nur für Pull Operationen benutzt, wenn viel Traffic für ein Projekt erwartet wird&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="git-auf-einem-server-einrichten">Git auf einem Server einrichten&lt;/h2>
+&lt;p>Entfernte Git Repositories werden in einem Ordner mit der Endung &lt;code>.git&lt;/code> angelegt. Dies als eindeutige Kennzeichnung, dass es sich um ein &amp;ldquo;Bare Repo&amp;rdquo; handelt. Ein Bare Repository enthält kein Arbeitsverzeichnis. Dies bedeutet, dass auf der obersten Dateisystemebene des Repositories keine ausgecheckten Inhalte vorhanden sind. Aber sehen wir uns das gleich anhand eines Beispiels an.&lt;/p>
+&lt;h3 id="git-repository-auf-einem-server-erstellen-und-lokal-klonen">Git Repository auf einem Server erstellen und lokal klonen&lt;/h3>
+&lt;blockquote>
+&lt;p>Hinweis: Bitte den Hostnamen &amp;ldquo;zwiseliserver42&amp;rdquo; in den Commands jeweils durch den eigenen Server ersetzen.&lt;/p>
+&lt;/blockquote>
+&lt;p>Wir erstellen wie folgt ein Repository auf einem Server unserer Wahl:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 ~&lt;span style="color:#f92672">]&lt;/span> mkdir /opt/repository.git
+&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 ~&lt;span style="color:#f92672">]&lt;/span> cd /opt/repository.git
+&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> git init --bare --shared
+Initialized empty shared Git repository in /opt/repository.git
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;blockquote>
+&lt;p>Beachte die Optionen von &lt;code>git init&lt;/code>! Lies kurz in der Manpage nach was diese genau bewirken&lt;/p>
+&lt;/blockquote>
+&lt;p>Die Verzeichnisstruktur auf dem Server sieht danach wie folgt aus:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> ls -alht
+total 44K
+drwxrwsr-x. &lt;span style="color:#ae81ff">7&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 .
+-rw-rw-r--. &lt;span style="color:#ae81ff">1&lt;/span> root root &lt;span style="color:#ae81ff">126&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 config
+drwxrwsr-x. &lt;span style="color:#ae81ff">4&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 objects
+-rw-rw-r--. &lt;span style="color:#ae81ff">1&lt;/span> root root &lt;span style="color:#ae81ff">23&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 HEAD
+drwxrwsr-x. &lt;span style="color:#ae81ff">4&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 refs
+drwxrwsr-x. &lt;span style="color:#ae81ff">2&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 hooks
+drwxrwsr-x. &lt;span style="color:#ae81ff">2&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 branches
+-rw-rw-r--. &lt;span style="color:#ae81ff">1&lt;/span> root root &lt;span style="color:#ae81ff">73&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 description
+drwxrwsr-x. &lt;span style="color:#ae81ff">2&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 info
+dr-xr-x---. &lt;span style="color:#ae81ff">6&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 ..
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Klonen wir dieses Repo nun lokal auf unseren Client, sieht dies folgendermassen aus:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>zwiseli@kompiuter ~&lt;span style="color:#f92672">]&lt;/span> git clone root@zwiseliserver42:/opt/repository.git
+Cloning into &lt;span style="color:#e6db74">&amp;#39;repository&amp;#39;&lt;/span>...
+warning: You appear to have cloned an empty repository.
+&lt;span style="color:#f92672">[&lt;/span>zwiseli@kompiuter ~&lt;span style="color:#f92672">]&lt;/span> cd repository
+&lt;span style="color:#f92672">[&lt;/span>zwiseli@kompiuter repository&lt;span style="color:#f92672">]&lt;/span> ls -alht
+ls -alht
+total &lt;span style="color:#ae81ff">0&lt;/span>
+drwxrwxrwt. &lt;span style="color:#ae81ff">26&lt;/span> root root &lt;span style="color:#ae81ff">740&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 ..
+drwxrwxr-x. &lt;span style="color:#ae81ff">7&lt;/span> zwiseli zwiseli &lt;span style="color:#ae81ff">200&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 .git
+drwxrwxr-x. &lt;span style="color:#ae81ff">3&lt;/span> zwiseli zwiseli &lt;span style="color:#ae81ff">60&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 .
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Wir haben das aktuell noch leere Repository erfolgreich geklont. Die auf dem Server vorhandenen Files liegen nun im Verzeichnis &lt;code>.git&lt;/code>.
+Es wäre schön, wenn wir nun mit anderen Zwiselis zusammen an etwas schönem entwickeln könnten. Dafür erstellen wir den User &amp;ldquo;rubeli&amp;rdquo; und erstellen das Directory &lt;code>.ssh&lt;/code>, um einen authorized Key für diesen Benutzer einzutragen:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> adduser rubeli
+&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> su - rubeli
+&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> mkdir .ssh
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Im untenstehenden Command &lt;PUBKEY> übungshalber durch den eigenen Publickey ersetzen, und noch die korrekten Berechtigungen auf dem File setzen:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> echo &lt;span style="color:#e6db74">&amp;#34;&amp;lt;PUBKEY&amp;gt;&amp;#34;&lt;/span> &amp;gt; /home/rubeli/.ssh/authorized_keys
+&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> chmod &lt;span style="color:#ae81ff">600&lt;/span> /home/rubeli/.ssh/authorized_keys
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Somit haben wir (hoffentlich) eine funktionsfähige SSH Verbindung für den Benutzer rubeli. Ob diese funktioniert, sehen wir sofort, wenn wir probieren mit rubeli das Repository auszuchecken:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>zwiseli@kompiuter ~&lt;span style="color:#f92672">]&lt;/span> git clone rubeli@zwiseliserver42:/opt/repository.git rubelirepository
+Cloning into &lt;span style="color:#e6db74">&amp;#39;rubelirepository&amp;#39;&lt;/span>...
+warning: You appear to have cloned an empty repository.
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Somit wird klar, dass es für ein einfaches Repository zur Kollaboration Git-seitig absolut keine Einstellungen benötigt. Dies ist eine grosse Stärke von Git.&lt;/p>
+&lt;h2 id="hooks">Hooks&lt;/h2>
+&lt;p>Hooks sind eine praktische Möglichkeit, bei gewissen Aktionen in Git Scripts auszuführen die das Leben ungemein erleichtern. Der Einsatz von Hooks macht tendenziell nur mit entfernten Repositories Sinn. Soll zum Beispiel vor einem Commit die Syntax des Codes überprüft werden, ist dies mit einem lokalen Pre-Commit Hook möglich. In lokal ausgecheckten Repositories finden sich im Verzeichnis &lt;code>.git/hooks/&lt;/code> Beispiele für alle möglichen Anwendungsfälle.
+Ebenfalls besteht die Möglichkeit, Hooks auf Serverseite zu konfigurieren. Mehr Infos zu Hooks &lt;a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">gibt es hier&lt;/a>&lt;/p>
+&lt;h2 id="git-server-software">Git Server Software&lt;/h2>
+&lt;p>Natürlich kommt man in der komplizierten Welt der IT mit den Bordmitteln von Linux und Git irgendwann mal an die Grenzen, und wünscht sich beispielsweise granularere Berechtigungsvergabe oder sogar ein webbasiertes UI. Hier eine (nicht abschliessende) Liste mit verfügbaren Tools, um sich das Leben bei der Verwaltung von Git Repositories vielleicht ein Bisschen einfacher zu machen:&lt;/p>
+&lt;ul>
+&lt;li>Gitea: &lt;a href="https://gitea.io">https://gitea.io&lt;/a>&lt;/li>
+&lt;li>Gitolite: &lt;a href="https://gitolite.com">https://gitolite.com&lt;/a>&lt;/li>
+&lt;li>Gitosis: &lt;a href="https://github.com/tv42/gitosis">https://github.com/tv42/gitosis&lt;/a>&lt;/li>
+&lt;li>GitLab: &lt;a href="https://gitlab.com/">https://gitlab.com/&lt;/a>&lt;/li>
+&lt;li>Bitbucket: &lt;a href="https://bitbucket.org">https://bitbucket.org&lt;/a>&lt;/li>
+&lt;/ul></description></item></channel></rss>
