@@ -1,6 +1,5 @@
 ---
-title: "Labs"
-weight: 2
+title: Docs
 menu:
   main:
     weight: 1
