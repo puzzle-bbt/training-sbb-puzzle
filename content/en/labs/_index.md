@@ -1,9 +1,9 @@
 ---
-title: Docs
+title: Labs
 type: docs
 menu:
   main:
-    weight: 1
+    weight: 2
 ---
 
 ## Übersicht
