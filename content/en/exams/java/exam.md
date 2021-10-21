@@ -1,15 +1,14 @@
 ---
-title: "Exam 1"
-linkTitle: "Exam1"
+title: "JUnit Exams"
+linkTitle: "JUnit"
+type: docs
 weight: 1
-description: > 
-  Maven Continuous Integration
+sectionnumber: 1
+date: 2021-10-12
+description: >
+  JUnit Exam
 ---
 
-# Exam 1
-Test <br>
-Test <br>
-Test <br>
-Test <br>
-Test <br>
-Test <br>
+## {{% param sectionnumber %}}: Einleitung
+
+_TODO: Beschreibung zu diesem Kapitel_
