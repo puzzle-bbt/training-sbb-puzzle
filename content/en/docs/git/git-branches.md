@@ -282,3 +282,7 @@ In der Regel können viele Merge-Konflikte verhindert oder minimiert werden, ind
 - Regelmässige Rebases mit dem Merge-Zielbranch.
 
 - Erstellen kleiner und atomarer Commits.
+
+### Hands On
+
+https://learngitbranching.js.org/
