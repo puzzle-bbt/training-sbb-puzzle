@@ -14,10 +14,10 @@ Ziel dieses Labs:
 
 Dieses Lab unterteilt sich in folgende Themenbereiche:
 
-* [Was ist dieses Git?](01)
-* [Git Basics](02)
-* [Git Branches](03)
-* [Git Server](04)
+* [Was ist dieses Git?](was-ist-git)
+* [Git Basics](git-basics)
+* [Git Branches](git-branches)
+* [Git Server]()
 
 ## Voraussetzungen
 
