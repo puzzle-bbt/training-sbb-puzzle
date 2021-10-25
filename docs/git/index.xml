@@ -970,7 +970,9 @@ first line from testing
 &lt;li>
 &lt;p>Erstellen kleiner und atomarer Commits.&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs:</title><link>/training-sbb-puzzle/docs/git/04/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/04/</guid><description>
+&lt;/ul>
+&lt;h3 id="hands-on">Hands On&lt;/h3>
+&lt;p>&lt;a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/&lt;/a>&lt;/p></description></item><item><title>Docs:</title><link>/training-sbb-puzzle/docs/git/04/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/04/</guid><description>
 &lt;h1 id="git-server">Git Server&lt;/h1>
 &lt;!-- Vielleicht anderes Program -->
 &lt;p>Im Kapitel 2 haben wir &lt;code>git init&lt;/code> bereits kennengelernt. Um ein Git Repository zur Kollaboration anzulegen, sind weitere Schritte nötig. Dies behandelt dieses Kapitel. Voraussetzung für dieses Kapitel ist SSH Zugriff inkl. Root Berechtigung auf ein beliebiges Linux System.&lt;/p>

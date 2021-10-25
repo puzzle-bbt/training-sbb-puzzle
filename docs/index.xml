@@ -4177,7 +4177,9 @@ first line from testing
 &lt;li>
 &lt;p>Erstellen kleiner und atomarer Commits.&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs: Annotationen &amp; Reflection API</title><link>/training-sbb-puzzle/docs/java/reflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/reflection/</guid><description>
+&lt;/ul>
+&lt;h3 id="hands-on">Hands On&lt;/h3>
+&lt;p>&lt;a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/&lt;/a>&lt;/p></description></item><item><title>Docs: Annotationen &amp; Reflection API</title><link>/training-sbb-puzzle/docs/java/reflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/reflection/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich kann mit Reflection Informationen zur Laufzeit zu Klassen, Objekten, Methoden und Attributen ermitteln&lt;/li>
