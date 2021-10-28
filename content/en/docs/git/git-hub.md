@@ -6,6 +6,10 @@ weight: 4
 
 GitHub ist ein Webservice für das Verwalten von Software Code via Git. GitHub bietet darüber hinaus viele weitere Funktionen von Projektmanagement mit Taskverwaltung, über Wikis bis zum Buildserver. GitHub ist die Plattform für Opensource Projekte.
 
+Weitere Infos:
+* [Wikipedia](https://de.wikipedia.org/wiki/GitHub)
+* [GitHub Doku](https://try.github.com/)
+
 ## GitHub Alternativen
 
 Natürlich ist GitHub nicht die einzige Platform welche diesen Service anbietet. Alle Alternativen haben ihre eigenen Features und Limitierungen. Im Kern verwenden aber alle Git.
@@ -90,18 +94,18 @@ Für dieses Hands-On werden wir alles via Webinterface von GitHub machen. Ein Gr
 1. https://guides.github.com/activities/hello-world/
 
 ### Forks, Pull Requests, Reviews
-1. Fork erstellen von: https://github.com/SylivanKenobi/hello-world
+1. Fork erstellen vom [Repo](https://github.com/SylivanKenobi/hello-world) erstellen.
 ![Create Fork](../github/create-fork.png "Create Fork")
 1. Weitere User auf Fork hinzufügen
 ![Add User](../github/add-user.png "Add User")
-1. Branch auf Forke erstellen
-1. `hello-world.sh` auf dem Master Branch anpassen und commiten
+1. Branch auf Fork erstellen
+1. `hello-world.sh` auf dem Master Branch anpassen und commiten.
     ```bash
     #!/bin/bash
 
     echo 'Hello World Master'
     ```
-1. `hello-world.sh` auf dem Feature Branch anpassen und commiten
+1. `hello-world.sh` auf dem neuen Branch anpassen und commiten.
     ```bash
     #!/bin/bash
 
@@ -111,7 +115,7 @@ Für dieses Hands-On werden wir alles via Webinterface von GitHub machen. Ein Gr
 1. Da auf beiden Branches die gleich Zeile bearbeitet wurde kann GitHub die Branches nicht automatisch Mergen. Aus diesem Grund müssen zuerst die Konflikte gelöst werden
 ![Fix Merge](../github/fix-merge.png "Fix Merge")
 1. Teamkollege als Reviewer zuweisen.
-1. Review Changes umsetzen
-1. Pull Request mergen
-1. Merge Request auf Original Repo erstellen
-1. Betreuer als Reviewer hinzufügen
+1. Review Changes umsetzen.
+1. Pull Request mergen.
+1. Merge Request auf [Original Repo](https://github.com/SylivanKenobi/hello-world) erstellen
+1. Ende
