@@ -240,6 +240,23 @@ index 1e6db46..dd7161b 100644
 
 Ist man sicher, dass man nur die Änderungen gestaged hat, welche man auch commiten will, kann man dies mit dem Befehl `git commit` bewerkstelligen. Dadurch wird ein Editor geöffnet und man wird gebeten eine Beschreibung für die Änderungen anzugeben. Wie solche Beschreibungen gestaltet werden sollen und was alles in eine "Commit Message" gehört, darüber gibt es ganz unterschiedliche Meinungen. Idealerweise probiert man sich vorzustellen, was man an Zusätzlichen Informationen braucht, wenn man die Änderungen in zwei Jahren wieder anschaut, um zu verstehen, was und warum das geändert wurde.
 
+Oft gibt es pro Projekt Konventionen wie eine Commit Message aussehen soll. Falls dies nicht existiert gibt es ein paar wenige Punkte welche die Messages einiges lesbarer und verständlicher machen:
+
+* Sprache: Englisch
+* Kurze und prägnante Message, idealerweise unter 50 Zeichen [Details](https://chris.beams.io/posts/git-commit/#limit-50)
+* Mit Grossbuchstaben beginnen [Details](https://chris.beams.io/posts/git-commit/#capitalize)
+* Kein Punkt am Schluss [Details](https://chris.beams.io/posts/git-commit/#end)
+* Den *imperative mood* (Befehlsform) verwenden, also «Fix bug with X» statt «Fixed bug with X» oder «More fixes for broken stuff» [Details](https://chris.beams.io/posts/git-commit/#imperative)
+* Wenn vorhanden das Ticket referenzieren:
+   * Bei Gitlab/Github Issues: «Add X #12345»
+ 
+([Puzzle Docs](https://docs.puzzle.ch/qm-guide/latest/source-code-management/index.html#_konvention_commit_message))
+
+Weitere Quellen dazu:
+* https://chris.beams.io/posts/git-commit/
+* https://www.conventionalcommits.org/en/v1.0.0/
+
+
 Ein paar hilfreiche Flags zu `git commit`:
 
 * `-m` um eine Message gleich anzugeben und nicht den Editor zu öffnen (kann je nach Commit Message Guideline hinderlich sein, da es keine Multiline Kommentare erlaubt):
