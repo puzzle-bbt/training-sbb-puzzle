@@ -2,8 +2,8 @@
 title: "Git"
 weight: 3
 sectionnumber: 1
-date: 2021-08-24
-description: Das mit diesem Git
+date: 2021-10-28
+description: Verteile Versionsverwaltung mit Git
 ---
 
 Hallo Ninja!
