@@ -6,9 +6,10 @@ date: 2021-08-24
 description: Das mit diesem Git
 ---
 
-Ziel dieses Labs:
+Hallo Ninja!
+Es freut uns das du **git** kennen lernen willst!
 
-> Kennenlernen von Git, dessen Verwendungszweck und Anwendung
+Wir haben hier ein Lab für dich zusammengestellt damit du in dieses Thema eintauchen kannst. Finde für dich heraus warum **git** eine Zeitmaschine ist und was es mit den Paralleluniversen auf sich hat.
 
 ## Schwerpunkte
 
