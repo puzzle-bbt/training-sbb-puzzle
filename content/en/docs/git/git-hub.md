@@ -4,7 +4,7 @@ linkTitle: "GitHub"
 weight: 4
 ---
 
-GitHub ist eine Webseite für das Verwalten von remote Git Repositories. Neben den Features von Git hat Github noch weitere Features wie Zugriffskontrolle und verschiedene Funktionen für die Zusammenarbeit, wie z. B. Wikis und grundlegende task management tools für jedes Projekt.
+GitHub ist ein Webservice für das Verwalten von Software Code via Git. GitHub bietet darüber hinaus viele weitere Funktionen von Projektmanagement mit Taskverwaltung, über Wikis bis zum Buildserver. GitHub ist die Plattform für Opensource Projekte.
 
 ## GitHub Alternativen
 
