@@ -395,6 +395,25 @@ index 1e6db46..dd7161b 100644
 &lt;/div>&lt;p>&lt;code>git diff&lt;/code> vergleicht die Änderungen welche noch nicht gestaged wurden, will man bereits gestagte Änderungen überprüfen braucht es zusätzlich das Flag &lt;code>--staged&lt;/code> oder &lt;code>--cached&lt;/code> (die beiden Flags sind Synonyme).&lt;/p>
 &lt;h3 id="commiten">Commiten&lt;/h3>
 &lt;p>Ist man sicher, dass man nur die Änderungen gestaged hat, welche man auch commiten will, kann man dies mit dem Befehl &lt;code>git commit&lt;/code> bewerkstelligen. Dadurch wird ein Editor geöffnet und man wird gebeten eine Beschreibung für die Änderungen anzugeben. Wie solche Beschreibungen gestaltet werden sollen und was alles in eine &amp;ldquo;Commit Message&amp;rdquo; gehört, darüber gibt es ganz unterschiedliche Meinungen. Idealerweise probiert man sich vorzustellen, was man an Zusätzlichen Informationen braucht, wenn man die Änderungen in zwei Jahren wieder anschaut, um zu verstehen, was und warum das geändert wurde.&lt;/p>
+&lt;p>Oft gibt es pro Projekt Konventionen wie eine Commit Message aussehen soll. Falls dies nicht existiert gibt es ein paar wenige Punkte welche die Messages einiges lesbarer und verständlicher machen:&lt;/p>
+&lt;ul>
+&lt;li>Sprache: Englisch&lt;/li>
+&lt;li>Kurze und prägnante Message, idealerweise unter 50 Zeichen &lt;a href="https://chris.beams.io/posts/git-commit/#limit-50">Details&lt;/a>&lt;/li>
+&lt;li>Mit Grossbuchstaben beginnen &lt;a href="https://chris.beams.io/posts/git-commit/#capitalize">Details&lt;/a>&lt;/li>
+&lt;li>Kein Punkt am Schluss &lt;a href="https://chris.beams.io/posts/git-commit/#end">Details&lt;/a>&lt;/li>
+&lt;li>Den &lt;em>imperative mood&lt;/em> (Befehlsform) verwenden, also «Fix bug with X» statt «Fixed bug with X» oder «More fixes for broken stuff» &lt;a href="https://chris.beams.io/posts/git-commit/#imperative">Details&lt;/a>&lt;/li>
+&lt;li>Wenn vorhanden das Ticket referenzieren:
+&lt;ul>
+&lt;li>Bei Gitlab/Github Issues: «Add X #12345»&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;p>(&lt;a href="https://docs.puzzle.ch/qm-guide/latest/source-code-management/index.html#_konvention_commit_message">Puzzle Docs&lt;/a>)&lt;/p>
+&lt;p>Weitere Quellen dazu:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://chris.beams.io/posts/git-commit/">https://chris.beams.io/posts/git-commit/&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.conventionalcommits.org/en/v1.0.0/">https://www.conventionalcommits.org/en/v1.0.0/&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;p>Ein paar hilfreiche Flags zu &lt;code>git commit&lt;/code>:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>-m&lt;/code> um eine Message gleich anzugeben und nicht den Editor zu öffnen (kann je nach Commit Message Guideline hinderlich sein, da es keine Multiline Kommentare erlaubt):&lt;/li>
