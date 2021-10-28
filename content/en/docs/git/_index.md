@@ -6,7 +6,8 @@ date: 2021-10-28
 description: Verteile Versionsverwaltung mit Git
 ---
 
-Hallo Ninja!
+Hallo Ninja! 🥷
+
 Es freut uns das du **git** kennen lernen willst!
 
 Wir haben hier ein Lab für dich zusammengestellt damit du in dieses Thema eintauchen kannst. Finde für dich heraus warum **git** eine Zeitmaschine ist und was es mit den Paralleluniversen auf sich hat.
@@ -19,6 +20,14 @@ Dieses Lab unterteilt sich in folgende Themenbereiche:
 * [Git Basics](git-basics)
 * [Git Branches](git-branches)
 * [Git Server]()
+
+## Let's play!
+
+Meisterst du diese Challenges?
+
+* [oh my git!](https://ohmygit.org/)
+* [learn git branching](https://learngitbranching.js.org/)
+* [git immersion](https://gitimmersion.com)
 
 ## Voraussetzungen
 
