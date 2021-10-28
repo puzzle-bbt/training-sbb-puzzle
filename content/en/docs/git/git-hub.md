@@ -86,27 +86,32 @@ Nachteile:
 
 Für dieses Hands-On werden wir alles via Webinterface von GitHub machen. Ein Grossteil der Tasks können jedoch auch Lokal mit git im Terminal gemacht werden.
 
-### Branches und PR's
+### Branches und Pull Requests
 1. https://guides.github.com/activities/hello-world/
 
-### Forks, PR's, Reviews
+### Forks, Pull Requests, Reviews
 1. Fork erstellen von: https://github.com/SylivanKenobi/hello-world
-![Artifactory](../github/create-fork.png "Artifactory")
+![Create Fork](../github/create-fork.png "Create Fork")
+1. Weitere User auf Fork hinzufügen
+![Add User](../github/add-user.png "Add User")
 1. Branch auf Forke erstellen
-1. `hello-world.sh` auf beiden Branches bearbeiten
+1. `hello-world.sh` auf dem Master Branch anpassen und commiten
+    ```bash
+    #!/bin/bash
 
+    echo 'Hello World Master'
+    ```
+1. `hello-world.sh` auf dem Feature Branch anpassen und commiten
+    ```bash
+    #!/bin/bash
 
-
-
-    Fork erstellen von https://github.com/SylivanKenobi/hello-world
-    Create Branch, change hello world, create MR, review, merge
-    change hello world on branch commit and push, change hello world on master commit and push, rebase branch with master, fix merge issue, force push, create MR, review, merge
-    Rebase with Fork, create PR with fix issue
-
-
-
-<!-- ## Hooks
-
-Hooks sind eine praktische Möglichkeit, bei gewissen Aktionen in Git Scripts auszuführen die das Leben ungemein erleichtern. Der Einsatz von Hooks macht tendenziell nur mit entfernten Repositories Sinn. Soll zum Beispiel vor einem Commit die Syntax des Codes überprüft werden, ist dies mit einem lokalen Pre-Commit Hook möglich. In lokal ausgecheckten Repositories finden sich im Verzeichnis `.git/hooks/` Beispiele für alle möglichen Anwendungsfälle.
-Ebenfalls besteht die Möglichkeit, Hooks auf Serverseite zu konfigurieren. Mehr Infos zu Hooks [gibt es hier](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) -->
-
+    echo 'Hello World Feature'
+    ```
+1. Pull Request erstellen
+1. Da auf beiden Branches die gleich Zeile bearbeitet wurde kann GitHub die Branches nicht automatisch Mergen. Aus diesem Grund müssen zuerst die Konflikte gelöst werden
+![Fix Merge](../github/fix-merge.png "Fix Merge")
+1. Teamkollege als Reviewer zuweisen.
+1. Review Changes umsetzen
+1. Pull Request mergen
+1. Merge Request auf Original Repo erstellen
+1. Betreuer als Reviewer hinzufügen
