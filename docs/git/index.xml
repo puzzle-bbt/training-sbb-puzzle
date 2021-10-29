@@ -991,10 +991,25 @@ first line from testing
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="hands-on">Hands On&lt;/h3>
-&lt;p>&lt;a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/&lt;/a>&lt;/p></description></item><item><title>Docs:</title><link>/training-sbb-puzzle/docs/git/04/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/04/</guid><description>
-&lt;h1 id="git-server">Git Server&lt;/h1>
-&lt;!-- Vielleicht anderes Program -->
-&lt;p>Im Kapitel 2 haben wir &lt;code>git init&lt;/code> bereits kennengelernt. Um ein Git Repository zur Kollaboration anzulegen, sind weitere Schritte nötig. Dies behandelt dieses Kapitel. Voraussetzung für dieses Kapitel ist SSH Zugriff inkl. Root Berechtigung auf ein beliebiges Linux System.&lt;/p>
+&lt;p>&lt;a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/&lt;/a>&lt;/p></description></item><item><title>Docs: GitHub</title><link>/training-sbb-puzzle/docs/git/git-hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/git-hub/</guid><description>
+&lt;p>GitHub ist ein Webservice für das Verwalten von Software Code via Git. Darüber hinaus bietet GitHub viele weitere Funktionen, von Projektmanagement mit Taskverwaltung, über Wikis bis zum Buildserver. GitHub ist die Plattform für Opensource Projekte.&lt;/p>
+&lt;p>Weitere Infos:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://de.wikipedia.org/wiki/GitHub">Wikipedia&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://try.github.com/">GitHub Doku&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="github-alternativen">GitHub Alternativen&lt;/h2>
+&lt;p>Natürlich ist GitHub nicht die einzige Plattform, welche diesen Service anbietet. Alle Alternativen haben ihre eigenen Features und Limitierungen, im Kern verwenden aber alle Git.&lt;/p>
+&lt;p>Alternativen:&lt;/p>
+&lt;ul>
+&lt;li>Gitea: &lt;a href="https://gitea.io">https://gitea.io&lt;/a>&lt;/li>
+&lt;li>Gitolite: &lt;a href="https://gitolite.com">https://gitolite.com&lt;/a>&lt;/li>
+&lt;li>Gitosis: &lt;a href="https://github.com/tv42/gitosis">https://github.com/tv42/gitosis&lt;/a>&lt;/li>
+&lt;li>GitLab: &lt;a href="https://gitlab.com/">https://gitlab.com/&lt;/a>&lt;/li>
+&lt;li>Bitbucket: &lt;a href="https://bitbucket.org">https://bitbucket.org&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="github-account">GitHub Account&lt;/h2>
+&lt;p>Falls du noch keinen GitHub-Account hast, wäre jetzt der Moment einen zu erstellen. &lt;a href="https://github.com/signup">https://github.com/signup&lt;/a>&lt;/p>
 &lt;h2 id="git-protokolle">Git Protokolle&lt;/h2>
 &lt;p>Um auf ein entferntes Git Repository zuzugreifen, gibt es in der Regel zwei Varianten:&lt;/p>
 &lt;ul>
@@ -1003,7 +1018,7 @@ first line from testing
 &lt;/ul>
 &lt;p>Beide Protokolle bieten standardmässig Verschlüsselung, Authentifizierung und Komprimierung.&lt;/p>
 &lt;h3 id="git-über-https">Git über HTTPS&lt;/h3>
-&lt;p>Kurze Wiederholung: Um ein Repository über HTTPS zu klonen verwendet man&lt;/p>
+&lt;p>Kurze Wiederholung: Um ein Repository über HTTPS zu klonen verwendet man den Befehl:&lt;/p>
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -1012,16 +1027,16 @@ first line from testing
 &lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git clone https://github.com/kelseyhightower/nocode.git
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>Dies ist die einfachste Variante um Code schnell herunterzuladen und lokal im eigenen Editor zu betrachten.&lt;/p>
+&lt;/div>&lt;p>Dies ist die einfachste Variante, um Code schnell herunterzuladen und lokal im eigenen Editor zu betrachten.&lt;/p>
 &lt;p>Vorteile:&lt;/p>
 &lt;ul>
 &lt;li>Anonymer Zugriff möglich&lt;/li>
 &lt;li>Zugriff für Systeme, auf denen SSH weniger verbreitet ist&lt;/li>
-&lt;li>HTTPS ist auf vielen Corporate Firewalls standardmässig offen&amp;hellip;&lt;/li>
+&lt;li>HTTPS ist auf vielen Corporate Firewalls standardmässig offen&lt;/li>
 &lt;/ul>
 &lt;p>Nachteile:&lt;/p>
 &lt;ul>
-&lt;li>Zwischenspeicherung der Anmeldedaten weniger benutzerfreundlich als mit SSH Keys&lt;/li>
+&lt;li>Zwischenspeicherung der Anmeldedaten mit HTTPS weniger benutzerfreundlich als mit SSH Keys&lt;/li>
 &lt;li>Konfiguration des Webservers etwas komplizierter als die von SSH&lt;/li>
 &lt;/ul>
 &lt;h3 id="git-über-ssh">Git über SSH&lt;/h3>
@@ -1034,7 +1049,7 @@ first line from testing
 &lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">$ git clone git@github.com:cajotafer/10xengineers.git
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>Für die meisten Anwendungsfälle ist dies der bevorzugte Weg um entfernte Git Repositories zu verwenden.&lt;/p>
+&lt;/div>&lt;p>Für die meisten Anwendungsfälle ist dies der bevorzugte Weg, um entfernte Git Repositories zu verwenden.&lt;/p>
 &lt;p>Vorteile:&lt;/p>
 &lt;ul>
 &lt;li>SSH ist auf jedem Linux System bereits vorinstalliert (server- wie clientseitig)&lt;/li>
@@ -1045,105 +1060,51 @@ first line from testing
 &lt;ul>
 &lt;li>Bietet keinen anonymen Zugriff&lt;/li>
 &lt;/ul>
-&lt;h3 id="weitere-möglichkeiten">Weitere Möglichkeiten&lt;/h3>
-&lt;ul>
-&lt;li>File
-&lt;ul>
-&lt;li>Die wohl einfachste Möglichkeit um ein Git Repository mit anderen zusammen zu nutzen&lt;/li>
-&lt;li>Repository kann z.B. auf einem gemeinsam genutzen NFS Share liegen, von dem man danach lokal das Repository klont&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Git Protokoll
-&lt;ul>
-&lt;li>Unterstützt keine Authentifizierung&lt;/li>
-&lt;li>Wird deswegen sinnvollerweise nur für Pull Operationen benutzt, wenn viel Traffic für ein Projekt erwartet wird&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="git-auf-einem-server-einrichten">Git auf einem Server einrichten&lt;/h2>
-&lt;p>Entfernte Git Repositories werden in einem Ordner mit der Endung &lt;code>.git&lt;/code> angelegt. Dies als eindeutige Kennzeichnung, dass es sich um ein &amp;ldquo;Bare Repo&amp;rdquo; handelt. Ein Bare Repository enthält kein Arbeitsverzeichnis. Dies bedeutet, dass auf der obersten Dateisystemebene des Repositories keine ausgecheckten Inhalte vorhanden sind. Aber sehen wir uns das gleich anhand eines Beispiels an.&lt;/p>
-&lt;h3 id="git-repository-auf-einem-server-erstellen-und-lokal-klonen">Git Repository auf einem Server erstellen und lokal klonen&lt;/h3>
-&lt;blockquote>
-&lt;p>Hinweis: Bitte den Hostnamen &amp;ldquo;zwiseliserver42&amp;rdquo; in den Commands jeweils durch den eigenen Server ersetzen.&lt;/p>
-&lt;/blockquote>
-&lt;p>Wir erstellen wie folgt ein Repository auf einem Server unserer Wahl:&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 ~&lt;span style="color:#f92672">]&lt;/span> mkdir /opt/repository.git
-&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 ~&lt;span style="color:#f92672">]&lt;/span> cd /opt/repository.git
-&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> git init --bare --shared
-Initialized empty shared Git repository in /opt/repository.git
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;blockquote>
-&lt;p>Beachte die Optionen von &lt;code>git init&lt;/code>! Lies kurz in der Manpage nach was diese genau bewirken&lt;/p>
-&lt;/blockquote>
-&lt;p>Die Verzeichnisstruktur auf dem Server sieht danach wie folgt aus:&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> ls -alht
-total 44K
-drwxrwsr-x. &lt;span style="color:#ae81ff">7&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 .
--rw-rw-r--. &lt;span style="color:#ae81ff">1&lt;/span> root root &lt;span style="color:#ae81ff">126&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 config
-drwxrwsr-x. &lt;span style="color:#ae81ff">4&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 objects
--rw-rw-r--. &lt;span style="color:#ae81ff">1&lt;/span> root root &lt;span style="color:#ae81ff">23&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 HEAD
-drwxrwsr-x. &lt;span style="color:#ae81ff">4&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 refs
-drwxrwsr-x. &lt;span style="color:#ae81ff">2&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 hooks
-drwxrwsr-x. &lt;span style="color:#ae81ff">2&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 branches
--rw-rw-r--. &lt;span style="color:#ae81ff">1&lt;/span> root root &lt;span style="color:#ae81ff">73&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 description
-drwxrwsr-x. &lt;span style="color:#ae81ff">2&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 info
-dr-xr-x---. &lt;span style="color:#ae81ff">6&lt;/span> root root 4.0K Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 ..
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Klonen wir dieses Repo nun lokal auf unseren Client, sieht dies folgendermassen aus:&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>zwiseli@kompiuter ~&lt;span style="color:#f92672">]&lt;/span> git clone root@zwiseliserver42:/opt/repository.git
-Cloning into &lt;span style="color:#e6db74">&amp;#39;repository&amp;#39;&lt;/span>...
-warning: You appear to have cloned an empty repository.
-&lt;span style="color:#f92672">[&lt;/span>zwiseli@kompiuter ~&lt;span style="color:#f92672">]&lt;/span> cd repository
-&lt;span style="color:#f92672">[&lt;/span>zwiseli@kompiuter repository&lt;span style="color:#f92672">]&lt;/span> ls -alht
-ls -alht
-total &lt;span style="color:#ae81ff">0&lt;/span>
-drwxrwxrwt. &lt;span style="color:#ae81ff">26&lt;/span> root root &lt;span style="color:#ae81ff">740&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 ..
-drwxrwxr-x. &lt;span style="color:#ae81ff">7&lt;/span> zwiseli zwiseli &lt;span style="color:#ae81ff">200&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 .git
-drwxrwxr-x. &lt;span style="color:#ae81ff">3&lt;/span> zwiseli zwiseli &lt;span style="color:#ae81ff">60&lt;/span> Jun &lt;span style="color:#ae81ff">3&lt;/span> 13:37 .
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Wir haben das aktuell noch leere Repository erfolgreich geklont. Die auf dem Server vorhandenen Files liegen nun im Verzeichnis &lt;code>.git&lt;/code>.
-Es wäre schön, wenn wir nun mit anderen Zwiselis zusammen an etwas schönem entwickeln könnten. Dafür erstellen wir den User &amp;ldquo;rubeli&amp;rdquo; und erstellen das Directory &lt;code>.ssh&lt;/code>, um einen authorized Key für diesen Benutzer einzutragen:&lt;/p>
+&lt;h2 id="github-features">GitHub Features&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Feature&lt;/th>
+&lt;th>Funktion&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Issues&lt;/td>
+&lt;td>Ermöglichen es, Tasks in einem Repo zu erstellen und zu tracken.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Pull Requests&lt;/td>
+&lt;td>Ein Pull Request ermöglicht es, Changes zu Reviewen und zu besprechen, bevor sie in einen Branch gemerged werden.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Forks&lt;/td>
+&lt;td>Eine Fork ist eine Kopie von einem Git-Repo. Die Fork kann dann bearbeitet und angepasst werden, ohne dass das originale Repo davon betroffen ist.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GitHub Pages&lt;/td>
+&lt;td>Basic Webseiten welche auf GitHub gehostet werden&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>GitHub Actions&lt;/td>
+&lt;td>CI/CD Integration von GitHub&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="hands-on">Hands On&lt;/h2>
+&lt;p>Für dieses Hands-On werden wir alles via Webinterface von GitHub machen. Ein Grossteil der Tasks können jedoch auch Lokal mit Git im Terminal gemacht werden.&lt;/p>
+&lt;h3 id="branches-und-pull-requests">Branches und Pull Requests&lt;/h3>
+&lt;ol>
+&lt;li>&lt;a href="https://guides.github.com/activities/hello-world/">https://guides.github.com/activities/hello-world/&lt;/a>&lt;/li>
+&lt;/ol>
+&lt;h3 id="forks-pull-requests-reviews">Forks, Pull Requests, Reviews&lt;/h3>
+&lt;ol>
+&lt;li>Fork erstellen vom &lt;a href="https://github.com/SylivanKenobi/hello-world">Repo&lt;/a>.
+&lt;img src="../github/create-fork.png" alt="Create Fork" title="Create Fork">&lt;/li>
+&lt;li>Weitere User auf Fork hinzufügen
+&lt;img src="../github/add-user.png" alt="Add User" title="Add User">&lt;/li>
+&lt;li>Branch auf Fork erstellen&lt;/li>
+&lt;li>&lt;code>hello-world.sh&lt;/code> auf dem Master Branch anpassen und committen.
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -1151,23 +1112,13 @@ Es wäre schön, wenn wir nun mit anderen Zwiselis zusammen an etwas schönem en
 &lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> adduser rubeli
-&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> su - rubeli
-&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> mkdir .ssh
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#!/bin/bash
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>
+echo &lt;span style="color:#e6db74">&amp;#39;Hello World Master&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>Im untenstehenden Command &lt;PUBKEY> übungshalber durch den eigenen Publickey ersetzen, und noch die korrekten Berechtigungen auf dem File setzen:&lt;/p>
-&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-&lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
-&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> echo &lt;span style="color:#e6db74">&amp;#34;&amp;lt;PUBKEY&amp;gt;&amp;#34;&lt;/span> &amp;gt; /home/rubeli/.ssh/authorized_keys
-&lt;span style="color:#f92672">[&lt;/span>root@zwiseliserver42 repository.git&lt;span style="color:#f92672">]&lt;/span> chmod &lt;span style="color:#ae81ff">600&lt;/span> /home/rubeli/.ssh/authorized_keys
-&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
-&lt;/div>
-&lt;/div>&lt;p>Somit haben wir (hoffentlich) eine funktionsfähige SSH Verbindung für den Benutzer rubeli. Ob diese funktioniert, sehen wir sofort, wenn wir probieren mit rubeli das Repository auszuchecken:&lt;/p>
+&lt;/div>&lt;/li>
+&lt;li>&lt;code>hello-world.sh&lt;/code> auf dem neuen Branch anpassen und committen.
 &lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 &lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
 &lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
@@ -1175,21 +1126,18 @@ Es wäre schön, wenn wir nun mit anderen Zwiselis zusammen an etwas schönem en
 &lt;/span>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 &lt;/span>&lt;/code>&lt;/pre>&lt;/td>
 &lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#f92672">[&lt;/span>zwiseli@kompiuter ~&lt;span style="color:#f92672">]&lt;/span> git clone rubeli@zwiseliserver42:/opt/repository.git rubelirepository
-Cloning into &lt;span style="color:#e6db74">&amp;#39;rubelirepository&amp;#39;&lt;/span>...
-warning: You appear to have cloned an empty repository.
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e">#!/bin/bash
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>
+echo &lt;span style="color:#e6db74">&amp;#39;Hello World Feature&amp;#39;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>Somit wird klar, dass es für ein einfaches Repository zur Kollaboration Git-seitig absolut keine Einstellungen benötigt. Dies ist eine grosse Stärke von Git.&lt;/p>
-&lt;h2 id="hooks">Hooks&lt;/h2>
-&lt;p>Hooks sind eine praktische Möglichkeit, bei gewissen Aktionen in Git Scripts auszuführen die das Leben ungemein erleichtern. Der Einsatz von Hooks macht tendenziell nur mit entfernten Repositories Sinn. Soll zum Beispiel vor einem Commit die Syntax des Codes überprüft werden, ist dies mit einem lokalen Pre-Commit Hook möglich. In lokal ausgecheckten Repositories finden sich im Verzeichnis &lt;code>.git/hooks/&lt;/code> Beispiele für alle möglichen Anwendungsfälle.
-Ebenfalls besteht die Möglichkeit, Hooks auf Serverseite zu konfigurieren. Mehr Infos zu Hooks &lt;a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">gibt es hier&lt;/a>&lt;/p>
-&lt;h2 id="git-server-software">Git Server Software&lt;/h2>
-&lt;p>Natürlich kommt man in der komplizierten Welt der IT mit den Bordmitteln von Linux und Git irgendwann mal an die Grenzen, und wünscht sich beispielsweise granularere Berechtigungsvergabe oder sogar ein webbasiertes UI. Hier eine (nicht abschliessende) Liste mit verfügbaren Tools, um sich das Leben bei der Verwaltung von Git Repositories vielleicht ein Bisschen einfacher zu machen:&lt;/p>
-&lt;ul>
-&lt;li>Gitea: &lt;a href="https://gitea.io">https://gitea.io&lt;/a>&lt;/li>
-&lt;li>Gitolite: &lt;a href="https://gitolite.com">https://gitolite.com&lt;/a>&lt;/li>
-&lt;li>Gitosis: &lt;a href="https://github.com/tv42/gitosis">https://github.com/tv42/gitosis&lt;/a>&lt;/li>
-&lt;li>GitLab: &lt;a href="https://gitlab.com/">https://gitlab.com/&lt;/a>&lt;/li>
-&lt;li>Bitbucket: &lt;a href="https://bitbucket.org">https://bitbucket.org&lt;/a>&lt;/li>
-&lt;/ul></description></item></channel></rss>
+&lt;/div>&lt;/li>
+&lt;li>Pull Request erstellen&lt;/li>
+&lt;li>Da auf beiden Branches die gleich Zeile bearbeitet wurde, kann GitHub die Branches nicht automatisch Mergen. Aus diesem Grund müssen zuerst die Konflikte gelöst werden
+&lt;img src="../github/fix-merge.png" alt="Fix Merge" title="Fix Merge">&lt;/li>
+&lt;li>Teamkollege als Reviewer zuweisen.&lt;/li>
+&lt;li>Review Changes umsetzen.&lt;/li>
+&lt;li>Pull Request mergen.&lt;/li>
+&lt;li>Merge Request auf &lt;a href="https://github.com/SylivanKenobi/hello-world">Original Repo&lt;/a> erstellen&lt;/li>
+&lt;li>Ende&lt;/li>
+&lt;/ol></description></item></channel></rss>
