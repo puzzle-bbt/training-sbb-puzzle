@@ -19,7 +19,7 @@ Dieses Lab unterteilt sich in folgende Themenbereiche:
 * [Was ist dieses Git?](was-ist-git)
 * [Git Basics](git-basics)
 * [Git Branches](git-branches)
-* [Git Server]()
+* [GitHub](git-hub)
 
 ## Let's play!
 
