@@ -1,10 +1,9 @@
 baseurl = ""
-title = "Ausbildung SBB / Puzzle"
-
+title = "IT Ninjas"
 
 enableGitInfo = true
 
-theme = ["docsy-puzzle", "docsy-plus", "docsy"]
+theme = ["docsy-it-ninjas", "docsy-plus", "docsy"]
 
 languageCode = "en-us"
 
@@ -49,7 +48,7 @@ anchor = "smart"
 
 [Languages]
 [Languages.en]
-title = "Ausbildung SBB / Puzzle"
+title = "IT Ninjas"
 languageName = "German"
 weight = 1
 
