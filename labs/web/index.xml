@@ -1,0 +1,150 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT Ninjas – Web Labs</title><link>/training-sbb-puzzle/labs/web/</link><description>Recent content in Web Labs on IT Ninjas</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="/training-sbb-puzzle/labs/web/index.xml" rel="self" type="application/rss+xml"/><item><title>Labs: Angular Setup</title><link>/training-sbb-puzzle/labs/web/angular_setup/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/labs/web/angular_setup/</guid><description>
+&lt;p>In diesem Lab wirst du Angular installieren.&lt;/p>
+&lt;p>Das Lab orientiert sich stark an der offiziellen Dokumentation von Angular. Die Dokumentation findest du unter &lt;a href="https://angular.io/docs" target="_blank">angular.io/docs&lt;/a>.&lt;/p>
+&lt;h3 id="teil-1---installation-von-nodejs">Teil 1 - Installation von Node.js&lt;/h3>
+&lt;p>In diesem ersten Schritt wirst du Node.js installieren, falls Node.js noch nicht bei dir installiert ist.&lt;/p>
+&lt;p>Überprüfe zuerst, ob Node.js bereits auf deinem System installiert ist:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">node --version
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Falls Node.js noch nicht auf deinem System installiert ist, kannst du Node.js über nvm (Node Version Manager) installieren.&lt;/p>
+&lt;p>Um nvm zu installieren, verwende das Skript&lt;code>install.sh&lt;/code>, das sich innerhalb des repository &lt;a href="https://github.com/nvm-sh/nvm" target="_blank">github.com/nvm-sh/nvm&lt;/a> befindet:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Verwende den Befehl&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">nvm --version
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>um zu überprüfen, ob nvm richtig installiert wurde.&lt;/p>
+&lt;p>&lt;strong>nvm install&lt;/strong>&lt;/p>
+&lt;p>Um eine spezifische Version&lt;code>&amp;lt;x.y.z&amp;gt;&lt;/code>von Node.js zu installieren (Beispiel &lt;code>12.22.7&lt;/code>), verwende den Befehl&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">nvm install &amp;lt;version&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Angular benötigt eine Active LTS (long-term support) oder eine Maintenance LTS Version von Node.js. Die aktuellen Active LTS und Maintenance LTS Versionen von Node.js sind unten abgebildet (Stand Oktober 2021), und unter &lt;a href="https://nodejs.org/en/about/releases/" target="_blank">nodejs.org/en/about/releases&lt;/a> aufgelistet.&lt;/p>
+&lt;p>&lt;br />&lt;/p>
+&lt;p>&lt;img src="../angular_setup/node_js_schedule.svg" alt="Active LTS und Maintenance LTS Versionen von Node js">&lt;/p>
+&lt;p>&lt;strong>nvm list&lt;/strong>&lt;/p>
+&lt;p>Verwende den Befehl&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">nvm list
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>um alle installierten Versionen von Node.js aufzulisten.&lt;/p>
+&lt;p>&lt;strong>nvm use&lt;/strong>&lt;/p>
+&lt;p>Falls bereits eine Version von Node.js auf deinem System installiert war, und du nvm nachträglich installiert hast, kannst du mit dem Befehl&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">nvm use system
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>die bereits vorher installierte Version zur Verwendung auswählen.&lt;/p>
+&lt;p>Eine über nvm installierte Version &amp;lt;x.y.z&amp;gt; von Node.js kannst du mit&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">nvm use &amp;lt;x.y.z&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>zur Verwendung auswählen.&lt;/p>
+&lt;p>&lt;strong>nvm alias default&lt;/strong>&lt;/p>
+&lt;p>Zum Schluss, verwende&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">nvm alias default &amp;lt;version&amp;gt;
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>um eine mit Angular kompatible Version &amp;lt;version&amp;gt; (Beispiele &lt;code>system&lt;/code>, &lt;code>12.22.7&lt;/code>) von Node.js als Standard festzulegen.&lt;/p>
+&lt;hr>
+&lt;p>Für die Installation von Angular im nächsten Schritt brauchst du den package mangager npm von Node.js. Stelle sicher, dass npm ebenfalls auf deinem System installiert ist:&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">npm --version
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="teil-2---installation-des-cli-von-angular">Teil 2 - Installation des CLI von Angular&lt;/h3>
+&lt;p>In diesem Schritt wirst du das CLI (command line interface) von Angular über npm installieren.&lt;/p>
+&lt;p>Verwende dazu den Befehl&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">npm install -g @angular/cli
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Mit der Flag &lt;code>-g&lt;/code> wird das CLI von Angular global installiert. Das heisst unter anderem, dass executables in einem Verzeichnis installiert oder referenziet werden, das in der Umgebungsvariablen &lt;code>PATH&lt;/code> aufgelistet ist. Mehr Informationen dazu findest du &lt;a href="https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/" target="_blank">hier&lt;/a>.&lt;/p>
+&lt;p>Zur Überprüfung, ob Angular richtig installiert wurde, verwende&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">ng version
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="teil-3---erstellen-einer-app-mit-dem-cli">Teil 3 - Erstellen einer App mit dem CLI&lt;/h3>
+&lt;p>Das Grundgerüst einer Angular-App erstellt man mit dem Befehl &lt;code>ng new&lt;/code>.&lt;/p>
+&lt;p>Verwende den Befehl&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">ng new my-app
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>um eine neue App mit der Bezeichnung &lt;code>my-app&lt;/code> zu erstellen.&lt;/p>
+&lt;p>Bei den zwei Eingabeaufforderungen / Prompts kannst du mit Enter die Standardoption bestätigen. Das CLI erstellt anschliessend ein Verzeichnis mit dem Namen &lt;code>my-app&lt;/code> und den generierten Dateien.&lt;/p>
+&lt;h3 id="teil-4---ausführen-einer-app-mit-dem-cli">Teil 4 - Ausführen einer App mit dem CLI&lt;/h3>
+&lt;p>Das CLI von Angular einthält einen Server, der eine App lokal bereitstellen kann.&lt;/p>
+&lt;p>Verwende innerhalb des mit dem CLI erstellten Verzeichnisses den Befehl&lt;/p>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">ng serve
+&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>um die in der letzten Aufgabe erstellte App zu builden und zu starten.&lt;/p>
+&lt;p>Mit der zusätzlichen Option&lt;code>--open&lt;/code>öffnet das CLI die App direkt in einem Browser. Per default wird die App unter der Webadresse &lt;code>localhost:4200&lt;/code> bereitgestellt.&lt;/p>
+&lt;p>Falls alles erfolgreich war, wird eine von Angular generierte Standardseite angezeigt. Die Seite ist unten abgebildet.&lt;/p>
+&lt;p>&lt;br />&lt;/p>
+&lt;p>&lt;img src="../angular_setup/ng_default_app.png" alt="Die von Angular generierte Standardseite.">&lt;/p></description></item></channel></rss>
