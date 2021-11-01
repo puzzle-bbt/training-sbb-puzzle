@@ -1,7 +1,7 @@
-# Ausbildung SBB / Puzzle
+# IT Ninjas Labs
 
 
-The techlab is available on GitHub Pages [here](https://puzzle-bbt.github.io/training-sbb-puzzle/).
+The techlab is available on GitHub Pages [here](https://it-ninjas.github.io/labs/).
 
 
 ## Content Sections
