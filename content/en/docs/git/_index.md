@@ -31,10 +31,7 @@ Meisterst du diese Challenges?
 
 ## Voraussetzungen
 
-* Linux Box
-* `git` installiert
-* vi Editor installiert
-* Etwas Zeit
+* [git](https://git-scm.com/book/de/v2/Erste-Schritte-Git-installieren) installiert
 
 ## Auch interessant, wird aber nicht behandelt:
 
