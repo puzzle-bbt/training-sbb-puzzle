@@ -1,10 +1,11 @@
 ---
 title: "Web"
-weight: 1
+type: docs
+weight: 2
 sectionnumber: 1
-date: 2021-08-23
+date: 2021-11-01
 description: >
-  Web Technologie lernen
+    Web Technologie lernen
 ---
 
 
