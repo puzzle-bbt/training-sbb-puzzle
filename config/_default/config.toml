@@ -1,5 +1,5 @@
 baseurl = ""
-title = "IT Ninjas"
+title = "IT Ninjas Labs"
 
 enableGitInfo = true
 
@@ -58,7 +58,7 @@ weight = 1
 
 #[[Languages.en.menu.main]]
 #weight = 3
-#name = "SBB + Puzzle ITC GmbH"
+#name = "IT Ninjas Labs"
 #url = "https://www.puzzle.ch"
 
 [markup]
@@ -76,8 +76,8 @@ weight = 1
 
 quarkusVersion = "1.12.0.Final"
 
-copyright = "Puzzle ITC GmbH"
-github_repo = "https://github.com/puzzle-bbt/training-sbb-puzzle"
+copyright = "it-ninjas.ch"
+github_repo = "https://github.com/it-ninjas/labs"
 github_branch = "master"
 
 enabledModule = "base"
@@ -101,8 +101,8 @@ footer_about_disable = true
 [params.links]
 [[params.links.developer]]
 name = "GitHub"
-icon = "fab fa-github" 
-url = "https://github.com/puzzle-bbt/training-sbb-puzzle"
+icon = "fab fa-github"
+url = "https://github.com/it-ninjas/labs"
 
 [[params.links.user]]
 name = "Twitter"
