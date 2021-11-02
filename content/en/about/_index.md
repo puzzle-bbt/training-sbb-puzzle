@@ -5,8 +5,8 @@ menu:
     weight: 4
 ---
 
-{{< blocks/cover title="SBB + Puzzle ITC" image_anchor="bottom" height="min" >}}
-<p class="lead mt-5">Ausbildungsunterlagen für das Basislehrjahr
+{{< blocks/cover title="IT Ninjas" image_anchor="bottom" height="min" >}}
+<p class="lead mt-5">Freie Plattform für IT Berufsbildung
 </p>
 {{< /blocks/cover >}}
 
