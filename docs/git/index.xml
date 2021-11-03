@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT Ninjas – Git</title><link>/training-sbb-puzzle/docs/git/</link><description>Recent content in Git on IT Ninjas</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 28 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/training-sbb-puzzle/docs/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Was ist Git</title><link>/training-sbb-puzzle/docs/git/was-ist-git/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/was-ist-git/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT Ninjas – Git</title><link>/docs/git/</link><description>Recent content in Git on IT Ninjas</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 28 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/docs/git/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Was ist Git</title><link>/docs/git/was-ist-git/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/was-ist-git/</guid><description>
 &lt;blockquote>
 &lt;p>Git [ɡɪt] ist eine freie Software zur verteilten Versionsverwaltung von Dateien, die durch Linus Torvalds initiiert wurde.&lt;/p>
 &lt;/blockquote>
@@ -47,7 +47,7 @@ matura_arbeit.docx matura_arbeit_fastfertig.docx matura_arbeit_wirklichfertig.do
 &lt;li>&lt;strong>Commited&lt;/strong>: Die Datei ist im aktuellen Zustand in die lokale Datenbank eingecheckt.&lt;/li>
 &lt;/ul>
 &lt;h3 id="minimaler-workflow">Minimaler Workflow&lt;/h3>
-&lt;p>Hat man ein Repository von einem anderen Rechner &lt;em>geklont&lt;/em>, kann man eine oder mehrere Dateien im Verzeichnisbaum editieren. Anschliessend &lt;em>staged&lt;/em> man diese Änderungen und &lt;em>commited&lt;/em> diese anschliessend.&lt;/p></description></item><item><title>Docs: Git Basics</title><link>/training-sbb-puzzle/docs/git/git-basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/git-basics/</guid><description>
+&lt;p>Hat man ein Repository von einem anderen Rechner &lt;em>geklont&lt;/em>, kann man eine oder mehrere Dateien im Verzeichnisbaum editieren. Anschliessend &lt;em>staged&lt;/em> man diese Änderungen und &lt;em>commited&lt;/em> diese anschliessend.&lt;/p></description></item><item><title>Docs: Git Basics</title><link>/docs/git/git-basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/git-basics/</guid><description>
 &lt;p>Git kann auf unterschiedliche Arten eingesetzt werden, es gibt graphische Oberflächen und die meisten Git-Server Software bieten Weboberflächen, welche das interagieren mit Git Repositories kinderleicht gestalten. Da diese Oberflächen meist sehr Produktspezifisch sind und oft auch nicht alle Funktionen beinhaltet werden hier nur die Kommandozeilen Befehle angeschaut. Ausserdem empfiehlt es sich mit git auf der Kommandozeile zu starten da es so viel verständlicher ist.&lt;/p>
 &lt;h2 id="inhalt">Inhalt&lt;/h2>
 &lt;ul>
@@ -513,7 +513,24 @@ private git@github.com:Lehrling/training-sbb-puzzle.git &lt;span style="color:#f
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="pushen">Pushen&lt;/h3>
-&lt;p>Wenn man seine Änderungen soweit hat, dass man sie mit dem Rest vom Team teilen will, dann kann man diese mit &lt;code>git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code> auf den Server laden. Dies funktioniert jedoch nur, wenn man auf dem Server auch Schreibrechte hat und niemand anderes vor einem gepusht hat.&lt;/p></description></item><item><title>Docs: Git Branches</title><link>/training-sbb-puzzle/docs/git/git-branches/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/git-branches/</guid><description>
+&lt;p>Wenn man seine Änderungen soweit hat, dass man sie mit dem Rest vom Team teilen will, dann kann man diese mit &lt;code>git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code> auf den Server laden. Dies funktioniert jedoch nur, wenn man auf dem Server auch Schreibrechte hat und niemand anderes vor einem gepusht hat.&lt;/p></description></item><item><title>Docs: Git Erweitert</title><link>/docs/git/git-extended/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/git-extended/</guid><description>
+&lt;p>Nachdem du die Basics von git gelernt hast, ist es Zeit dich weiter zu vertiefen.&lt;/p>
+&lt;h2 id="inhalt">Inhalt&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="#Stash">Stash&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="stash">Stash&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="squash">Squash&lt;/h2>
+&lt;h2 id="mergepullrequests">Merge/Pullrequests&lt;/h2>
+&lt;h2 id="cherry-pick">Cherry Pick&lt;/h2>
+&lt;h2 id="tag">Tag&lt;/h2>
+&lt;h2 id="alias">Alias&lt;/h2></description></item><item><title>Docs: Git Branches</title><link>/docs/git/git-branches/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/git-branches/</guid><description>
 &lt;h2 id="inhalt">Inhalt&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="#beispiel-f%C3%BCr-branching-merging-und-rebasing">Beispiel für Branching, Merging und Rebasing&lt;/a>&lt;/li>
@@ -991,7 +1008,7 @@ first line from testing
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="hands-on">Hands On&lt;/h3>
-&lt;p>&lt;a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/&lt;/a>&lt;/p></description></item><item><title>Docs: GitHub</title><link>/training-sbb-puzzle/docs/git/git-hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/git-hub/</guid><description>
+&lt;p>&lt;a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/&lt;/a>&lt;/p></description></item><item><title>Docs: GitHub</title><link>/docs/git/git-hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/git-hub/</guid><description>
 &lt;p>GitHub ist ein Webservice für das Verwalten von Software Code via Git. Darüber hinaus bietet GitHub viele weitere Funktionen, von Projektmanagement mit Taskverwaltung, über Wikis bis zum Buildserver. GitHub ist die Plattform für Opensource Projekte.&lt;/p>
 &lt;p>Weitere Infos:&lt;/p>
 &lt;ul>

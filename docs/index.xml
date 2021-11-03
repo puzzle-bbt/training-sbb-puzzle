@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT Ninjas – Docs</title><link>/training-sbb-puzzle/docs/</link><description>Recent content in Docs on IT Ninjas</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="/training-sbb-puzzle/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Labs: Angular Setup</title><link>/training-sbb-puzzle/labs/web/angular/angular_setup/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/labs/web/angular/angular_setup/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT Ninjas – Docs</title><link>/docs/</link><description>Recent content in Docs on IT Ninjas</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Labs: Angular Setup</title><link>/labs/web/angular/angular_setup/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>/labs/web/angular/angular_setup/</guid><description>
 &lt;p>In diesem Lab wirst du Angular installieren.&lt;/p>
 &lt;p>Das Lab orientiert sich stark an der offiziellen Dokumentation von Angular. Die Dokumentation findest du unter &lt;a href="https://angular.io/docs" target="_blank">angular.io/docs&lt;/a>.&lt;/p>
 &lt;h3 id="teil-1---installation-von-nodejs">Teil 1 - Installation von Node.js&lt;/h3>
@@ -147,7 +147,7 @@
 &lt;p>Mit der zusätzlichen Option&lt;code>--open&lt;/code>öffnet das CLI die App direkt in einem Browser. Per default wird die App unter der Webadresse &lt;code>localhost:4200&lt;/code> bereitgestellt.&lt;/p>
 &lt;p>Falls alles erfolgreich war, wird eine von Angular generierte Standardseite angezeigt. Die Seite ist unten abgebildet.&lt;/p>
 &lt;p>&lt;br />&lt;/p>
-&lt;p>&lt;img src="../angular_setup/ng_default_app.png" alt="Die von Angular generierte Standardseite.">&lt;/p></description></item><item><title>Docs: Heroes Tour: Take-aways</title><link>/training-sbb-puzzle/docs/web/angular/take_aways/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/web/angular/take_aways/</guid><description>
+&lt;p>&lt;img src="../angular_setup/ng_default_app.png" alt="Die von Angular generierte Standardseite.">&lt;/p></description></item><item><title>Docs: Heroes Tour: Take-aways</title><link>/docs/web/angular/take_aways/</link><pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate><guid>/docs/web/angular/take_aways/</guid><description>
 &lt;p>In diesem Doc sind die wichtigsten Take-aways des Tour of Heroes Tutorials von Angular zusammengefasst.&lt;/p>
 &lt;p>Die Dokumentation von Angular und das Tutorial findest du unter &lt;a href="https://angular.io/docs" target="_blank">angular.io/docs&lt;/a>.&lt;/p>
 &lt;h3 id="teil-1---angular-components">Teil 1 - Angular components&lt;/h3>
@@ -1053,9 +1053,9 @@
 &lt;/div>&lt;p>Im Fall eines Fehlers wird der Fehler auf der Konsole des Browsers ausgegeben, und manuell ein &lt;code>Observable&lt;/code> mit einem leeren Array als Antwort für den client konstruiert.&lt;/p>
 &lt;p>&lt;strong>HTPP Put, Post und Delete requests&lt;/strong>&lt;/p>
 &lt;p>Analog zu HTTP Get requests kann man auch Put, Post und Delete requests verwenden, abhängig von der REST-API des Servers.&lt;/p>
-&lt;p>WICHTIG: Damit ein HTTP request überhaupt ausgeführt wird, muss die Funktion &lt;code>subscribe()&lt;/code> des resultierenden &lt;code>Observable&lt;/code>-Objekts aufgerufen werden, auch wenn man keine Callback-Funktion registriert.&lt;/p></description></item><item><title>Exams: JUnit Exams</title><link>/training-sbb-puzzle/exams/java/exam/</link><pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/exams/java/exam/</guid><description>
+&lt;p>WICHTIG: Damit ein HTTP request überhaupt ausgeführt wird, muss die Funktion &lt;code>subscribe()&lt;/code> des resultierenden &lt;code>Observable&lt;/code>-Objekts aufgerufen werden, auch wenn man keine Callback-Funktion registriert.&lt;/p></description></item><item><title>Exams: JUnit Exams</title><link>/exams/java/exam/</link><pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate><guid>/exams/java/exam/</guid><description>
 &lt;h2 id="1-einleitung">1: Einleitung&lt;/h2>
-&lt;p>&lt;em>TODO: Beschreibung zu diesem Kapitel&lt;/em>&lt;/p></description></item><item><title>Docs: Java Grundlagen</title><link>/training-sbb-puzzle/docs/java/java-grundlagen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/java-grundlagen/</guid><description>
+&lt;p>&lt;em>TODO: Beschreibung zu diesem Kapitel&lt;/em>&lt;/p></description></item><item><title>Docs: Java Grundlagen</title><link>/docs/java/java-grundlagen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/java/java-grundlagen/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich weiss, was eine Klasse ist&lt;/li>
@@ -2408,9 +2408,9 @@ i++;
 } while (condition);
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Labs: Lab JUnit-Tests</title><link>/training-sbb-puzzle/labs/java/junit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/labs/java/junit/</guid><description>
+&lt;/div></description></item><item><title>Labs: Lab JUnit-Tests</title><link>/labs/java/junit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/labs/java/junit/</guid><description>
 &lt;h2 id="1-einleitung">1: Einleitung&lt;/h2>
-&lt;p>&lt;em>TODO: Beschreibung zu diesem Lab&lt;/em>&lt;/p></description></item><item><title>Docs: Was ist Git</title><link>/training-sbb-puzzle/docs/git/was-ist-git/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/was-ist-git/</guid><description>
+&lt;p>&lt;em>TODO: Beschreibung zu diesem Lab&lt;/em>&lt;/p></description></item><item><title>Docs: Was ist Git</title><link>/docs/git/was-ist-git/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/was-ist-git/</guid><description>
 &lt;blockquote>
 &lt;p>Git [ɡɪt] ist eine freie Software zur verteilten Versionsverwaltung von Dateien, die durch Linus Torvalds initiiert wurde.&lt;/p>
 &lt;/blockquote>
@@ -2459,7 +2459,7 @@ matura_arbeit.docx matura_arbeit_fastfertig.docx matura_arbeit_wirklichfertig.do
 &lt;li>&lt;strong>Commited&lt;/strong>: Die Datei ist im aktuellen Zustand in die lokale Datenbank eingecheckt.&lt;/li>
 &lt;/ul>
 &lt;h3 id="minimaler-workflow">Minimaler Workflow&lt;/h3>
-&lt;p>Hat man ein Repository von einem anderen Rechner &lt;em>geklont&lt;/em>, kann man eine oder mehrere Dateien im Verzeichnisbaum editieren. Anschliessend &lt;em>staged&lt;/em> man diese Änderungen und &lt;em>commited&lt;/em> diese anschliessend.&lt;/p></description></item><item><title>Docs: Git Basics</title><link>/training-sbb-puzzle/docs/git/git-basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/git-basics/</guid><description>
+&lt;p>Hat man ein Repository von einem anderen Rechner &lt;em>geklont&lt;/em>, kann man eine oder mehrere Dateien im Verzeichnisbaum editieren. Anschliessend &lt;em>staged&lt;/em> man diese Änderungen und &lt;em>commited&lt;/em> diese anschliessend.&lt;/p></description></item><item><title>Docs: Git Basics</title><link>/docs/git/git-basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/git-basics/</guid><description>
 &lt;p>Git kann auf unterschiedliche Arten eingesetzt werden, es gibt graphische Oberflächen und die meisten Git-Server Software bieten Weboberflächen, welche das interagieren mit Git Repositories kinderleicht gestalten. Da diese Oberflächen meist sehr Produktspezifisch sind und oft auch nicht alle Funktionen beinhaltet werden hier nur die Kommandozeilen Befehle angeschaut. Ausserdem empfiehlt es sich mit git auf der Kommandozeile zu starten da es so viel verständlicher ist.&lt;/p>
 &lt;h2 id="inhalt">Inhalt&lt;/h2>
 &lt;ul>
@@ -2925,7 +2925,24 @@ private git@github.com:Lehrling/training-sbb-puzzle.git &lt;span style="color:#f
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="pushen">Pushen&lt;/h3>
-&lt;p>Wenn man seine Änderungen soweit hat, dass man sie mit dem Rest vom Team teilen will, dann kann man diese mit &lt;code>git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code> auf den Server laden. Dies funktioniert jedoch nur, wenn man auf dem Server auch Schreibrechte hat und niemand anderes vor einem gepusht hat.&lt;/p></description></item><item><title>Docs: Maven und Continuous Integration</title><link>/training-sbb-puzzle/docs/java/maven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/maven/</guid><description>
+&lt;p>Wenn man seine Änderungen soweit hat, dass man sie mit dem Rest vom Team teilen will, dann kann man diese mit &lt;code>git push &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code> auf den Server laden. Dies funktioniert jedoch nur, wenn man auf dem Server auch Schreibrechte hat und niemand anderes vor einem gepusht hat.&lt;/p></description></item><item><title>Docs: Git Erweitert</title><link>/docs/git/git-extended/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/git-extended/</guid><description>
+&lt;p>Nachdem du die Basics von git gelernt hast, ist es Zeit dich weiter zu vertiefen.&lt;/p>
+&lt;h2 id="inhalt">Inhalt&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="#Stash">Stash&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="stash">Stash&lt;/h2>
+&lt;div class="highlight">&lt;div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+&lt;table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;">&lt;tr>&lt;td style="vertical-align:top;padding:0;margin:0;border:0;">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="squash">Squash&lt;/h2>
+&lt;h2 id="mergepullrequests">Merge/Pullrequests&lt;/h2>
+&lt;h2 id="cherry-pick">Cherry Pick&lt;/h2>
+&lt;h2 id="tag">Tag&lt;/h2>
+&lt;h2 id="alias">Alias&lt;/h2></description></item><item><title>Docs: Maven und Continuous Integration</title><link>/docs/java/maven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/java/maven/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich kenne die Grundlagen von Maven&lt;/li>
@@ -4273,7 +4290,7 @@ Die häufigsten Steps sind:&lt;/p>
 &lt;p>Der Continuous-Build dient dabei Branches vom Typ feature oder bugfix (je nach Konfiguration) zu bauen. Nur erfolgreiche Builds dieser Weiterentwicklungen oder Bugfixes können anschliessend in den Haupt-Entwicklungsbranch zurück gemerged werden. Dieser Build wird nicht auf eine Stage ausgeliefert.
 Der Release-Build dient der Herstellung einer neuen Version einer Anwendung. Dieser Build taggt die Version auf dem GIT-Repository und liefert sie auf die entsprechend konfigurierten Stages aus. Vorbehalten bleibt normalerweise der Release auf eine produktive Umgebung.
 Der Deploy-Build dient dem Deployment einer bestimmten Version auf eine bestimmte Stage. Die Stage kann dabei gewählt werden. Dieser Step-Typ wird normalerweise für den Release auf Integration- oder Produktionsplattformen verwendet.&lt;/p>
-&lt;p>Zum Nachlesen gibt es hier noch die Dokumentation der Pipeline: &lt;a href="https://confluence.sbb.ch/display/CLEW/Esta+Cloud+Pipeline">https://confluence.sbb.ch/display/CLEW/Esta+Cloud+Pipeline&lt;/a>&lt;/p></description></item><item><title>Docs: Exception Handling</title><link>/training-sbb-puzzle/docs/java/exception_handling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/exception_handling/</guid><description>
+&lt;p>Zum Nachlesen gibt es hier noch die Dokumentation der Pipeline: &lt;a href="https://confluence.sbb.ch/display/CLEW/Esta+Cloud+Pipeline">https://confluence.sbb.ch/display/CLEW/Esta+Cloud+Pipeline&lt;/a>&lt;/p></description></item><item><title>Docs: Exception Handling</title><link>/docs/java/exception_handling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/java/exception_handling/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich kenne die Schlüsselwörter try, catch, finally, throw und throws&lt;/li>
@@ -4775,7 +4792,7 @@ return &amp;#34;&amp;#34;;
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Wie wir sehen fällt der finally-Block zum Schliessen der Ressourcen komplett weg. Die beiden Ressourcen FileReader und BufferedReader werden automatisch geschlossen. Dies geschieht im Hintergrund über die Methode close, welche vom Interface AutoCloseable zur Verfügung gestellt wird. In einem try-with-resources Statement dürfen also nur Objekte vorliegen, welches das genannte Interface implementieren. Das Closeable-Interface mit der gleichen Funktion stellt dabei die Abwärtskompatibilität zu älteren Java-Versionen sicher. Grundsätzlich soll das Closeable-Interface für IO Streams verwendet werden, da es mit IOExceptions arbeitet.&lt;/p>
-&lt;p>Das Schliessen der Ressourcen hat stets die Reihenfolge von hinten nach vorne. In unserem Beispiel wird also zuerst der BufferedReader geschlossen und danach der FileReader. Die Verkettung von Ressourcen innerhalb eines try-with-resources Statements ist zu vermeiden. Besser sind separate Deklarationen wie oben gezeigt.&lt;/p></description></item><item><title>Docs: Git Branches</title><link>/training-sbb-puzzle/docs/git/git-branches/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/git-branches/</guid><description>
+&lt;p>Das Schliessen der Ressourcen hat stets die Reihenfolge von hinten nach vorne. In unserem Beispiel wird also zuerst der BufferedReader geschlossen und danach der FileReader. Die Verkettung von Ressourcen innerhalb eines try-with-resources Statements ist zu vermeiden. Besser sind separate Deklarationen wie oben gezeigt.&lt;/p></description></item><item><title>Docs: Git Branches</title><link>/docs/git/git-branches/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/git-branches/</guid><description>
 &lt;h2 id="inhalt">Inhalt&lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="#beispiel-f%C3%BCr-branching-merging-und-rebasing">Beispiel für Branching, Merging und Rebasing&lt;/a>&lt;/li>
@@ -5253,7 +5270,7 @@ first line from testing
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="hands-on">Hands On&lt;/h3>
-&lt;p>&lt;a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/&lt;/a>&lt;/p></description></item><item><title>Docs: Annotationen &amp; Reflection API</title><link>/training-sbb-puzzle/docs/java/reflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/reflection/</guid><description>
+&lt;p>&lt;a href="https://learngitbranching.js.org/">https://learngitbranching.js.org/&lt;/a>&lt;/p></description></item><item><title>Docs: Annotationen &amp; Reflection API</title><link>/docs/java/reflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/java/reflection/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich kann mit Reflection Informationen zur Laufzeit zu Klassen, Objekten, Methoden und Attributen ermitteln&lt;/li>
@@ -5821,7 +5838,7 @@ System.out.println(documentation.functionality());
 }
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div>&lt;p>Durch eine solche Auswertung liesse sich beispielsweise eine automatische Dokumentation generieren.&lt;/p></description></item><item><title>Docs: GitHub</title><link>/training-sbb-puzzle/docs/git/git-hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/git/git-hub/</guid><description>
+&lt;/div>&lt;p>Durch eine solche Auswertung liesse sich beispielsweise eine automatische Dokumentation generieren.&lt;/p></description></item><item><title>Docs: GitHub</title><link>/docs/git/git-hub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/git/git-hub/</guid><description>
 &lt;p>GitHub ist ein Webservice für das Verwalten von Software Code via Git. Darüber hinaus bietet GitHub viele weitere Funktionen, von Projektmanagement mit Taskverwaltung, über Wikis bis zum Buildserver. GitHub ist die Plattform für Opensource Projekte.&lt;/p>
 &lt;p>Weitere Infos:&lt;/p>
 &lt;ul>

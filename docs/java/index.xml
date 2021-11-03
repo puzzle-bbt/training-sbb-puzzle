@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT Ninjas – Java</title><link>/training-sbb-puzzle/docs/java/</link><description>Recent content in Java on IT Ninjas</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 23 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/training-sbb-puzzle/docs/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Java Grundlagen</title><link>/training-sbb-puzzle/docs/java/java-grundlagen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/java-grundlagen/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IT Ninjas – Java</title><link>/docs/java/</link><description>Recent content in Java on IT Ninjas</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 23 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/docs/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Java Grundlagen</title><link>/docs/java/java-grundlagen/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/java/java-grundlagen/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich weiss, was eine Klasse ist&lt;/li>
@@ -1351,7 +1351,7 @@ i++;
 } while (condition);
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
-&lt;/div></description></item><item><title>Docs: Maven und Continuous Integration</title><link>/training-sbb-puzzle/docs/java/maven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/maven/</guid><description>
+&lt;/div></description></item><item><title>Docs: Maven und Continuous Integration</title><link>/docs/java/maven/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/java/maven/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich kenne die Grundlagen von Maven&lt;/li>
@@ -2699,7 +2699,7 @@ Die häufigsten Steps sind:&lt;/p>
 &lt;p>Der Continuous-Build dient dabei Branches vom Typ feature oder bugfix (je nach Konfiguration) zu bauen. Nur erfolgreiche Builds dieser Weiterentwicklungen oder Bugfixes können anschliessend in den Haupt-Entwicklungsbranch zurück gemerged werden. Dieser Build wird nicht auf eine Stage ausgeliefert.
 Der Release-Build dient der Herstellung einer neuen Version einer Anwendung. Dieser Build taggt die Version auf dem GIT-Repository und liefert sie auf die entsprechend konfigurierten Stages aus. Vorbehalten bleibt normalerweise der Release auf eine produktive Umgebung.
 Der Deploy-Build dient dem Deployment einer bestimmten Version auf eine bestimmte Stage. Die Stage kann dabei gewählt werden. Dieser Step-Typ wird normalerweise für den Release auf Integration- oder Produktionsplattformen verwendet.&lt;/p>
-&lt;p>Zum Nachlesen gibt es hier noch die Dokumentation der Pipeline: &lt;a href="https://confluence.sbb.ch/display/CLEW/Esta+Cloud+Pipeline">https://confluence.sbb.ch/display/CLEW/Esta+Cloud+Pipeline&lt;/a>&lt;/p></description></item><item><title>Docs: Exception Handling</title><link>/training-sbb-puzzle/docs/java/exception_handling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/exception_handling/</guid><description>
+&lt;p>Zum Nachlesen gibt es hier noch die Dokumentation der Pipeline: &lt;a href="https://confluence.sbb.ch/display/CLEW/Esta+Cloud+Pipeline">https://confluence.sbb.ch/display/CLEW/Esta+Cloud+Pipeline&lt;/a>&lt;/p></description></item><item><title>Docs: Exception Handling</title><link>/docs/java/exception_handling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/java/exception_handling/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich kenne die Schlüsselwörter try, catch, finally, throw und throws&lt;/li>
@@ -3201,7 +3201,7 @@ return &amp;#34;&amp;#34;;
 &lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
 &lt;/div>
 &lt;/div>&lt;p>Wie wir sehen fällt der finally-Block zum Schliessen der Ressourcen komplett weg. Die beiden Ressourcen FileReader und BufferedReader werden automatisch geschlossen. Dies geschieht im Hintergrund über die Methode close, welche vom Interface AutoCloseable zur Verfügung gestellt wird. In einem try-with-resources Statement dürfen also nur Objekte vorliegen, welches das genannte Interface implementieren. Das Closeable-Interface mit der gleichen Funktion stellt dabei die Abwärtskompatibilität zu älteren Java-Versionen sicher. Grundsätzlich soll das Closeable-Interface für IO Streams verwendet werden, da es mit IOExceptions arbeitet.&lt;/p>
-&lt;p>Das Schliessen der Ressourcen hat stets die Reihenfolge von hinten nach vorne. In unserem Beispiel wird also zuerst der BufferedReader geschlossen und danach der FileReader. Die Verkettung von Ressourcen innerhalb eines try-with-resources Statements ist zu vermeiden. Besser sind separate Deklarationen wie oben gezeigt.&lt;/p></description></item><item><title>Docs: Annotationen &amp; Reflection API</title><link>/training-sbb-puzzle/docs/java/reflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/training-sbb-puzzle/docs/java/reflection/</guid><description>
+&lt;p>Das Schliessen der Ressourcen hat stets die Reihenfolge von hinten nach vorne. In unserem Beispiel wird also zuerst der BufferedReader geschlossen und danach der FileReader. Die Verkettung von Ressourcen innerhalb eines try-with-resources Statements ist zu vermeiden. Besser sind separate Deklarationen wie oben gezeigt.&lt;/p></description></item><item><title>Docs: Annotationen &amp; Reflection API</title><link>/docs/java/reflection/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/docs/java/reflection/</guid><description>
 &lt;h4 id="ziele">Ziele&lt;/h4>
 &lt;ul>
 &lt;li>Ich kann mit Reflection Informationen zur Laufzeit zu Klassen, Objekten, Methoden und Attributen ermitteln&lt;/li>
