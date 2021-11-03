@@ -1,5 +1,5 @@
 baseurl = ""
-title = "IT Ninjas Labs"
+title = "Welcome Ninja"
 
 enableGitInfo = true
 
@@ -103,13 +103,3 @@ footer_about_disable = true
 name = "GitHub"
 icon = "fab fa-github"
 url = "https://github.com/it-ninjas/labs"
-
-[[params.links.user]]
-name = "Twitter"
-icon = "fab fa-twitter"
-url = "https://twitter.com/puzzleitc"
-  
-[[params.links.user]]
-name = "LinkedIn"
-icon = "fab fa-linkedin-in"
-url = "https://www.linkedin.com/company/puzzle-itc/"
