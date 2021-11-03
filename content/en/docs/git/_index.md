@@ -20,6 +20,7 @@ Dieses Lab unterteilt sich in folgende Themenbereiche:
 * [Git Basics](git-basics)
 * [Git Branches](git-branches)
 * [GitHub](git-hub)
+* [Git Erweitert](git-extended)
 
 ## Let's play!
 
